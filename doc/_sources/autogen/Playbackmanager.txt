@@ -1,0 +1,7 @@
+Playbackmanager module
+======================
+
+.. automodule:: Playbackmanager
+    :members:
+    :undoc-members:
+    :show-inheritance:

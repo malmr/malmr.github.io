@@ -1,0 +1,7 @@
+SNARE module
+============
+
+.. automodule:: SNARE
+    :members:
+    :undoc-members:
+    :show-inheritance:

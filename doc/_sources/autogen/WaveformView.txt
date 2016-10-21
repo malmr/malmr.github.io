@@ -1,0 +1,7 @@
+WaveformView module
+===================
+
+.. automodule:: WaveformView
+    :members:
+    :undoc-members:
+    :show-inheritance:

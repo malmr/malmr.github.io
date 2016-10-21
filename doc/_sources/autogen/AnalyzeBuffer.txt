@@ -1,0 +1,7 @@
+AnalyzeBuffer module
+====================
+
+.. automodule:: AnalyzeBuffer
+    :members:
+    :undoc-members:
+    :show-inheritance:

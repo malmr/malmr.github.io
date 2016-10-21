@@ -1,0 +1,7 @@
+AnalyzeWidgetHisto module
+=========================
+
+.. automodule:: AnalyzeWidgetHisto
+    :members:
+    :undoc-members:
+    :show-inheritance:

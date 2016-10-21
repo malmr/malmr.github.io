@@ -1,0 +1,7 @@
+WaveformMarks module
+====================
+
+.. automodule:: WaveformMarks
+    :members:
+    :undoc-members:
+    :show-inheritance:

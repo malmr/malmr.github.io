@@ -1,0 +1,7 @@
+WaveformBuffer module
+=====================
+
+.. automodule:: WaveformBuffer
+    :members:
+    :undoc-members:
+    :show-inheritance:

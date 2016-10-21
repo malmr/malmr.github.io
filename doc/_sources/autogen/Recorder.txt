@@ -1,0 +1,7 @@
+Recorder module
+===============
+
+.. automodule:: Recorder
+    :members:
+    :undoc-members:
+    :show-inheritance:

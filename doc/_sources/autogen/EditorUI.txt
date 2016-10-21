@@ -1,0 +1,110 @@
+EditorUI package
+================
+
+Submodules
+----------
+
+EditorUI.TrackAbstract module
+-----------------------------
+
+.. automodule:: EditorUI.TrackAbstract
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackButtons module
+----------------------------
+
+.. automodule:: EditorUI.TrackButtons
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackCursor module
+---------------------------
+
+.. automodule:: EditorUI.TrackCursor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackData module
+-------------------------
+
+.. automodule:: EditorUI.TrackData
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackManager module
+----------------------------
+
+.. automodule:: EditorUI.TrackManager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackMark module
+-------------------------
+
+.. automodule:: EditorUI.TrackMark
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackOverview module
+-----------------------------
+
+.. automodule:: EditorUI.TrackOverview
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackSelection module
+------------------------------
+
+.. automodule:: EditorUI.TrackSelection
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackTimeline module
+-----------------------------
+
+.. automodule:: EditorUI.TrackTimeline
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackUI module
+-----------------------
+
+.. automodule:: EditorUI.TrackUI
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackView module
+-------------------------
+
+.. automodule:: EditorUI.TrackView
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorUI.TrackWaveform module
+-----------------------------
+
+.. automodule:: EditorUI.TrackWaveform
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: EditorUI
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+ProtoMain module
+================
+
+.. automodule:: ProtoMain
+    :members:
+    :undoc-members:
+    :show-inheritance:

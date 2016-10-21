@@ -1,0 +1,86 @@
+AnalyzeTools package
+====================
+
+Submodules
+----------
+
+AnalyzeTools.AnalyzeManager module
+----------------------------------
+
+.. automodule:: AnalyzeTools.AnalyzeManager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.AnalyzeWidget module
+---------------------------------
+
+.. automodule:: AnalyzeTools.AnalyzeWidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.AnalyzeWidgetSelect module
+---------------------------------------
+
+.. automodule:: AnalyzeTools.AnalyzeWidgetSelect
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.Calculation module
+-------------------------------
+
+.. automodule:: AnalyzeTools.Calculation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.CalibrationWidget module
+-------------------------------------
+
+.. automodule:: AnalyzeTools.CalibrationWidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.NavMenu module
+---------------------------
+
+.. automodule:: AnalyzeTools.NavMenu
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.NominalData module
+-------------------------------
+
+.. automodule:: AnalyzeTools.NominalData
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.Plot module
+------------------------
+
+.. automodule:: AnalyzeTools.Plot
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.PlotBar module
+---------------------------
+
+.. automodule:: AnalyzeTools.PlotBar
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: AnalyzeTools
+    :members:
+    :undoc-members:
+    :show-inheritance:

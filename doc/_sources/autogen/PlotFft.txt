@@ -1,0 +1,7 @@
+PlotFft module
+==============
+
+.. automodule:: PlotFft
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+WidgetAnalyzer module
+=====================
+
+.. automodule:: WidgetAnalyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:

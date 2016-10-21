@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AnalyzeTools package &mdash; SNARE 0.1.1a documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE 0.1.1a documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">AnalyzeTools package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.AnalyzeManager">AnalyzeTools.AnalyzeManager module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.AnalyzeWidget">AnalyzeTools.AnalyzeWidget module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.AnalyzeWidgetSelect">AnalyzeTools.AnalyzeWidgetSelect module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.Calculation">AnalyzeTools.Calculation module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.CalibrationWidget">AnalyzeTools.CalibrationWidget module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.NavMenu">AnalyzeTools.NavMenu module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.NominalData">AnalyzeTools.NominalData module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.Plot">AnalyzeTools.Plot module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools.PlotBar">AnalyzeTools.PlotBar module</a></li>
+<li><a class="reference internal" href="#module-AnalyzeTools">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>AnalyzeTools package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/AnalyzeTools.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analyzetools-package">
+<h1>AnalyzeTools package<a class="headerlink" href="#analyzetools-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-AnalyzeTools.AnalyzeManager">
+<span id="analyzetools-analyzemanager-module"></span><h2>AnalyzeTools.AnalyzeManager module<a class="headerlink" href="#module-AnalyzeTools.AnalyzeManager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.AnalyzeManager.</code><code class="descname">AnalyzeManager</code><span class="sig-paren">(</span><em>snare</em>, <em>analysesFullPaths</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>AnalyzeManager handles the main analyze methods like adding and deleting a widget. It contains the active widgets
+in an 2D dictionary depending on the channel. As well as a channel depending boolean dictionary with the activated
+reports. All widget information which is dynamically imported at startup (&#8220;Info.txt&#8221;) is also stored in this class.</p>
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.addWidget">
+<code class="descname">addWidget</code><span class="sig-paren">(</span><em>analysis</em>, <em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds Analyze to Analyze mapping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>analysis</strong> (<em>QWidget</em>) &#8211; Analyze</li>
+<li><strong>channel</strong> (<em>Object</em>) &#8211; unique Channelobject</li>
+<li><strong>selNo</strong> (<em>str</em>) &#8211; String of selection label</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.deleteWidget">
+<code class="descname">deleteWidget</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.deleteWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete Analyze from Analyze mapping.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> (<em>object</em>) &#8211; unique Channelobject</li>
+<li><strong>selNo</strong> (<em>str</em>) &#8211; String of selection label</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.getStatusBarString">
+<code class="descname">getStatusBarString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.getStatusBarString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string for the Status Bar with analyse depending information.
+:return: string with AnalyzeWidget information
+:rtype: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.listAnalyzeTypes">
+<code class="descname">listAnalyzeTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.listAnalyzeTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all imported Analyses as a list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of all AnalyzeWidgets</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.readWidgetInfo">
+<code class="descname">readWidgetInfo</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.readWidgetInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the Widget information and parameters from Info.txt.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) &#8211; path to Widget Info.txt</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">DataFrame with the imported Widget information</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">panda DataFrame</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.AnalyzeManager.AnalyzeManager.removeAnalysis">
+<code class="descname">removeAnalysis</code><a class="headerlink" href="#AnalyzeTools.AnalyzeManager.AnalyzeManager.removeAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.AnalyzeWidget">
+<span id="analyzetools-analyzewidget-module"></span><h2>AnalyzeTools.AnalyzeWidget module<a class="headerlink" href="#module-AnalyzeTools.AnalyzeWidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.AnalyzeWidget.</code><code class="descname">AnalyzeWidget</code><span class="sig-paren">(</span><em>snare</em>, <em>channel</em>, <em>selNo</em>, <em>timeWeight</em>, <em>fqWeight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>AnalyzeWidget is the base class for every Analyze Widget.
+It contains the figurePlot, navigation menu and the labels. The whole layout is set in self.layout. The figurePlot
+is stored in self.figurePlot, the navigation in self.nav and the labels in self.titleLabel as well as
+self.infoLabel.</p>
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger the delete widget signal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.pan">
+<code class="descname">pan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.pan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger the pan signal for the figure toolbar.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.report">
+<code class="descname">report</code><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.report" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger the reset signal for the figure toolbar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.sendReportState">
+<code class="descname">sendReportState</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.sendReportState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forward report information to ReportManager; with togglestate and channel/selNo as parameters.
+:param state: Togglestate of &#8220;Report&#8221; checkbox.
+:type state: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.setupLayout">
+<code class="descname">setupLayout</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.setupLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the default layout of a AnalyzeWidget.
+:param layout: transmit the layout
+:type layout: layout</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.zoom">
+<code class="descname">zoom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.zoom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger the zoom signal for the figure toolbar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidget.AnalyzeWidget.zoomPlot">
+<code class="descname">zoomPlot</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidget.AnalyzeWidget.zoomPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zoom in and out by ctrl + scroll wheel.
+:param event: Mouse event
+:type event: matplotlib.backend_bases.MouseEvent</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.AnalyzeWidgetSelect">
+<span id="analyzetools-analyzewidgetselect-module"></span><h2>AnalyzeTools.AnalyzeWidgetSelect module<a class="headerlink" href="#module-AnalyzeTools.AnalyzeWidgetSelect" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.AnalyzeWidgetSelect.</code><code class="descname">AnalyzeWidgetSelect</code><span class="sig-paren">(</span><em>snare</em>, <em>channel</em>, <em>selNo</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>AnalyzeWidgetSelect encapsulates the selected Analyze Widget and initialize it dynamically depending on user choice.
+The replot methods handlle the signals for replot/refresh. A method for clearing a layout is also implemented.</p>
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.clearLayout">
+<code class="descname">clearLayout</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.clearLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all Widgets that are on given layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>layout</strong> (<em>QLayout</em>) &#8211; Layout to clear.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.dynamicClassImport">
+<code class="descname">dynamicClassImport</code><span class="sig-paren">(</span><em>classstr</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.dynamicClassImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper method to import just the needed widget class dynamically depending on current user choice.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Corresponding class to selected Analyze Widget.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">QWidget</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.initParm">
+<code class="descname">initParm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.initParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize widget parameter given in Info.txt as constructor variables. If not given initialize with default
+values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>General refresh method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.refreshNav">
+<code class="descname">refreshNav</code><span class="sig-paren">(</span><em>timeWeight=None</em>, <em>fqWeight=None</em>, <em>parm1=None</em>, <em>parm2=None</em>, <em>parm3=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.refreshNav" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh method triggered from &#8220;Analyzer&#8221; Navigation Menu.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>timeWeight</strong> (<em>str</em>) &#8211; Time weight slow, fast or impulse</li>
+<li><strong>fqWeight</strong> (<em>str</em>) &#8211; Frequency weight A, B, C or Z</li>
+<li><strong>parm1</strong> (<em>str or int</em>) &#8211; optional parameter</li>
+<li><strong>parm2</strong> (<em>str or int</em>) &#8211; optional parameter</li>
+<li><strong>parm3</strong> (<em>str or int</em>) &#8211; optional parameter</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.replotSel">
+<code class="descname">replotSel</code><span class="sig-paren">(</span><em>channel=None</em>, <em>selNo=None</em>, <em>type='FFT'</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.replotSel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replot method triggered by &#8220;Editor&#8221; Analyze Button.
+Reimport widgetInfo because analyze type could have changed. Also initialize the new widget parameters,
+then refresh.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> (<em>object</em>) &#8211; unique Channelobject</li>
+<li><strong>selNo</strong> (<em>str</em>) &#8211; String of selection label</li>
+<li><strong>type</strong> (<em>str</em>) &#8211; Short analyze widget name (f.e. FFT, Hist. ...)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.setWidget">
+<code class="descname">setWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.AnalyzeWidgetSelect.AnalyzeWidgetSelect.setWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.Calculation">
+<span id="analyzetools-calculation-module"></span><h2>AnalyzeTools.Calculation module<a class="headerlink" href="#module-AnalyzeTools.Calculation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.Calculation.Calculation">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.Calculation.</code><code class="descname">Calculation</code><span class="sig-paren">(</span><em>snare</em>, <em>calib</em>, <em>timeWeight</em>, <em>fqWeight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<p>Pool for common calculation methods which is inherited for every calculation class of a analyze widget.
+The class contain all necessary nominal data adopted from IEC 61672:1 2013 Standard. More precisely this involves band
+indices, nominal frequencies and weighting values. Frequency weighting is preformed in time domain with an
+implementation of the difference equation in direct form II with the correct coefficients. ::seealso fqWeighting
+Time weighting is done by integrate the sound pressure using exponential integration. This is realized by applying
+a low-pass filter with one real pole at :math:&#8217;-1/tau&#8217;.</p>
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.db">
+<code class="descname">db</code><span class="sig-paren">(</span><em>a</em>, <em>rms=False</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dB sound pressure level or dB fullscale peakvalues depending if a calibration is set.
+warning:: Values in array &#8216;a&#8217; need to be energetic values (pressure squared).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>array</em>) &#8211; Input values</li>
+<li><strong>rms</strong> (<em>bool</em>) &#8211; Optional to handle root mean square</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">dBSPL or dBFS values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.dbSplToPascal">
+<code class="descname">dbSplToPascal</code><span class="sig-paren">(</span><em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.dbSplToPascal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts dBSPL to Pascal.
+:param db: Array with dB values
+:return: array</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.fft">
+<code class="descname">fft</code><span class="sig-paren">(</span><em>a</em>, <em>fftSize=10000</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the fast fourier transform of the input array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<em>array</em>) &#8211; Input array</li>
+<li><strong>fftSize</strong> &#8211; FFT Size; optional parameter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">FFT values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.fqWeighting">
+<code class="descname">fqWeighting</code><span class="sig-paren">(</span><em>values</em>, <em>fqWeight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.fqWeighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply A, B, C or Z frequency-weighting.
+First the needed nominal weighting coefficients a and b are imported. The filtering is implementated in lfilter
+with Direct Form II using standard difference equation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>values</strong> (<em>array</em>) &#8211; Input values</li>
+<li><strong>fqWeight</strong> (<em>str</em>) &#8211; Frequency-weight A, B, C or Z</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Frequency-weighted values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.indexOfNearestVal">
+<code class="descname">indexOfNearestVal</code><span class="sig-paren">(</span><em>a</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.indexOfNearestVal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of an array which is nearest to the given value.
+Finds an index of nearest value in sorted array compared to given value. Its fast for large arrays.
+warning:: array needs to be sorted!
+:param a: Input values
+:type a: array
+:param value: Nearest value</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type value:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Index of nearest value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.rms">
+<code class="descname">rms</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.rms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the root mean square of all the elements of a.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>a</strong> (<em>array</em>) &#8211; Input array</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">RMS of a</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.Calculation.Calculation.timeWeighting">
+<code class="descname">timeWeighting</code><span class="sig-paren">(</span><em>values</em>, <em>timeWeight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.Calculation.Calculation.timeWeighting" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Apply slow, fast or impulse time-weighting.</dt>
+<dd>Time weighting is done by integrate the sound pressure using exponential integration.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>values</strong> (<em>array</em>) &#8211; Input values</li>
+<li><strong>timeWeight</strong> (<em>str</em>) &#8211; Time-weight slow, fast or impulse</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Time-weighted values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.CalibrationWidget">
+<span id="analyzetools-calibrationwidget-module"></span><h2>AnalyzeTools.CalibrationWidget module<a class="headerlink" href="#module-AnalyzeTools.CalibrationWidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.CalibrationWidget.CalibrationWidget">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.CalibrationWidget.</code><code class="descname">CalibrationWidget</code><span class="sig-paren">(</span><em>snare</em>, <em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.CalibrationWidget.CalibrationWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Stores the calibration value of current selection (self.selNo) in SNARE&#8217;s channel dependent &#8216;calibrations&#8217;
+variable.</p>
+<dl class="method">
+<dt id="AnalyzeTools.CalibrationWidget.CalibrationWidget.calculate">
+<code class="descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.CalibrationWidget.CalibrationWidget.calculate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.NavMenu">
+<span id="analyzetools-navmenu-module"></span><h2>AnalyzeTools.NavMenu module<a class="headerlink" href="#module-AnalyzeTools.NavMenu" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.NavMenu.NavMenu">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.NavMenu.</code><code class="descname">NavMenu</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.delete">
+<code class="descname">delete</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NavMenu.NavMenu.deselectReport">
+<code class="descname">deselectReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.deselectReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NavMenu.NavMenu.getFrame">
+<code class="descname">getFrame</code><span class="sig-paren">(</span><em>bottomwidget</em>, <em>topwidget=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.getFrame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.pan">
+<code class="descname">pan</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.pan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.replot">
+<code class="descname">replot</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.replot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.reportState">
+<code class="descname">reportState</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.reportState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.reset">
+<code class="descname">reset</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NavMenu.NavMenu.selectReport">
+<code class="descname">selectReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.selectReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NavMenu.NavMenu.sendReplot">
+<code class="descname">sendReplot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.sendReplot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NavMenu.NavMenu.sendReportState">
+<code class="descname">sendReportState</code><span class="sig-paren">(</span><em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.sendReportState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenu.zoom">
+<code class="descname">zoom</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenu.zoom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="AnalyzeTools.NavMenu.NavMenuStandard">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.NavMenu.</code><code class="descname">NavMenuStandard</code><span class="sig-paren">(</span><em>timeWeighting=True</em>, <em>fqWeighting=True</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenuStandard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AnalyzeTools.NavMenu.NavMenu" title="AnalyzeTools.NavMenu.NavMenu"><code class="xref py py-class docutils literal"><span class="pre">AnalyzeTools.NavMenu.NavMenu</span></code></a></p>
+<p>Use this standard navigation class to provide your Analyse Widget with a regular, fixed Navigation bar:
+Frequency Weighting (Dropdown), Time Weighting (Dropdown), Reset, Zoom, Pan, Report (Checkbox) and Delete.
+Optional parameters &#8216;timeWeighting&#8217; and &#8216;fqWeighting&#8217; offers the possibility to hide the selection.</p>
+<p>For extendend more buttons, create your Widget own Nav* Script and inherit from WidgetNav Base Class.</p>
+<dl class="attribute">
+<dt id="AnalyzeTools.NavMenu.NavMenuStandard.replot">
+<code class="descname">replot</code><a class="headerlink" href="#AnalyzeTools.NavMenu.NavMenuStandard.replot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.NominalData">
+<span id="analyzetools-nominaldata-module"></span><h2>AnalyzeTools.NominalData module<a class="headerlink" href="#module-AnalyzeTools.NominalData" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.NominalData.NominalData">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.NominalData.</code><code class="descname">NominalData</code><a class="headerlink" href="#AnalyzeTools.NominalData.NominalData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Pool for common nominal data.
+Handles the read from NominalData CSV file in which the FFT band indices, corresponding nominal frequencies and
+time weighting coefficients for the difference equation are stored. All nominal data are adopted after standard
+IEC 61672:1 2013: A standard for sound level meters.</p>
+<dl class="method">
+<dt id="AnalyzeTools.NominalData.NominalData.nominalFrequencies">
+<code class="descname">nominalFrequencies</code><span class="sig-paren">(</span><em>nthOctave</em>, <em>bandNo</em>, <em>onlyNth=1</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NominalData.NominalData.nominalFrequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the nominal frequencies.
+Parameter nthOctave specifies for witch nth Octave the nominal frequencies are needed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>nthOctave</strong> (<em>int</em>) &#8211; Nth Octave</li>
+<li><strong>bandNo</strong> (<em>int</em>) &#8211; Band indices</li>
+<li><strong>onlyNth</strong> (<em>int</em>) &#8211; defines if every nominal frequency or just every nth frequency is returned</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">nominal frequencies</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.NominalData.NominalData.weighting">
+<code class="descname">weighting</code><span class="sig-paren">(</span><em>weight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.NominalData.NominalData.weighting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.Plot">
+<span id="analyzetools-plot-module"></span><h2>AnalyzeTools.Plot module<a class="headerlink" href="#module-AnalyzeTools.Plot" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.Plot.Plot">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.Plot.</code><code class="descname">Plot</code><a class="headerlink" href="#AnalyzeTools.Plot.Plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<p>Base class for every plot class.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.PlotBar">
+<span id="analyzetools-plotbar-module"></span><h2>AnalyzeTools.PlotBar module<a class="headerlink" href="#module-AnalyzeTools.PlotBar" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.PlotBar.PlotBar">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.PlotBar.</code><code class="descname">PlotBar</code><span class="sig-paren">(</span><em>xAxis</em>, <em>bars</em>, <em>calib</em>, <em>xLabelCalibrated</em>, <em>xLabelUncalibrated</em>, <em>yLabel</em>, <em>xLim</em>, <em>barWidth=0.1</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#AnalyzeTools.Plot.Plot" title="AnalyzeTools.Plot.Plot"><code class="xref py py-class docutils literal"><span class="pre">AnalyzeTools.Plot.Plot</span></code></a></p>
+<p>Common used plot class for bar plots.</p>
+<dl class="method">
+<dt id="AnalyzeTools.PlotBar.PlotBar.getPlot">
+<code class="descname">getPlot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBar.getPlot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="AnalyzeTools.PlotBar.PlotBarToolTip">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.PlotBar.</code><code class="descname">PlotBarToolTip</code><span class="sig-paren">(</span><em>values</em>, <em>xAxis</em>, <em>ax</em>, <em>calib=True</em>, <em>xDataComplete=None</em>, <em>xTol=None</em>, <em>xUnit='Hz'</em>, <em>yUnit='dB'</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBarToolTip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<p>callback for matplotlib to display a tooltip when frequencybars are
+clicked.
+parm: calib  boolean if plot is calibration dependent (dbFS and dBSPL on y axis)
+xDataComplete is used for FFT Plots, where more FQ Bars exist as the axis got for discrete values.</p>
+<dl class="method">
+<dt id="AnalyzeTools.PlotBar.PlotBarToolTip.changeColor">
+<code class="descname">changeColor</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBarToolTip.changeColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deal with pick events and changes the color..</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.PlotBar.PlotBarToolTip.distance">
+<code class="descname">distance</code><span class="sig-paren">(</span><em>x1</em>, <em>x2</em>, <em>y1</em>, <em>y2</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBarToolTip.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the distance between two points.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.PlotBar.PlotBarToolTip.drawTooltip">
+<code class="descname">drawTooltip</code><span class="sig-paren">(</span><em>ax</em>, <em>x</em>, <em>y</em>, <em>dbval</em>, <em>idx</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.PlotBar.PlotBarToolTip.drawTooltip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the bar text on the plot.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-AnalyzeTools" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Philipp Merz und Malte Merdes.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.1a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

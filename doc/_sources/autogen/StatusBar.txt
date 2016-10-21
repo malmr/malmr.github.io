@@ -1,0 +1,7 @@
+StatusBar module
+================
+
+.. automodule:: StatusBar
+    :members:
+    :undoc-members:
+    :show-inheritance:

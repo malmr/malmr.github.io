@@ -1,0 +1,7 @@
+CalibrationWidget module
+========================
+
+.. automodule:: CalibrationWidget
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,126 @@
+EditorBackend package
+=====================
+
+Submodules
+----------
+
+EditorBackend.AnalyzeBuffer module
+----------------------------------
+
+.. automodule:: EditorBackend.AnalyzeBuffer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Audioplayer module
+--------------------------------
+
+.. automodule:: EditorBackend.Audioplayer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Buffer module
+---------------------------
+
+.. automodule:: EditorBackend.Buffer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Calibrations module
+---------------------------------
+
+.. automodule:: EditorBackend.Calibrations
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Channel module
+----------------------------
+
+.. automodule:: EditorBackend.Channel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.MainBackend module
+--------------------------------
+
+.. automodule:: EditorBackend.MainBackend
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Recorder module
+-----------------------------
+
+.. automodule:: EditorBackend.Recorder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Unpacker module
+-----------------------------
+
+.. automodule:: EditorBackend.Unpacker
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.WavFile module
+----------------------------
+
+.. automodule:: EditorBackend.WavFile
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.WavFileWrite module
+---------------------------------
+
+.. automodule:: EditorBackend.WavFileWrite
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.Waveform module
+-----------------------------
+
+.. automodule:: EditorBackend.Waveform
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.WaveformBuffer module
+-----------------------------------
+
+.. automodule:: EditorBackend.WaveformBuffer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.WaveformBufferChannel module
+------------------------------------------
+
+.. automodule:: EditorBackend.WaveformBufferChannel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+EditorBackend.WaveformThread module
+-----------------------------------
+
+.. automodule:: EditorBackend.WaveformThread
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: EditorBackend
+    :members:
+    :undoc-members:
+    :show-inheritance:

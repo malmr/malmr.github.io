@@ -1,0 +1,7 @@
+Tracks module
+=============
+
+.. automodule:: Tracks
+    :members:
+    :undoc-members:
+    :show-inheritance:

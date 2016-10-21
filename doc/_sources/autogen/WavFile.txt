@@ -1,0 +1,7 @@
+WavFile module
+==============
+
+.. automodule:: WavFile
+    :members:
+    :undoc-members:
+    :show-inheritance:

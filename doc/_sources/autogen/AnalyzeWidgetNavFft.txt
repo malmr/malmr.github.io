@@ -1,0 +1,7 @@
+AnalyzeWidgetNavFft module
+==========================
+
+.. automodule:: AnalyzeWidgetNavFft
+    :members:
+    :undoc-members:
+    :show-inheritance:

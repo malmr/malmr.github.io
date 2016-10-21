@@ -1,0 +1,7 @@
+Track module
+============
+
+.. automodule:: Track
+    :members:
+    :undoc-members:
+    :show-inheritance:

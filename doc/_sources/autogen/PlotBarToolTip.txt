@@ -1,0 +1,7 @@
+PlotBarToolTip module
+=====================
+
+.. automodule:: PlotBarToolTip
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+TrackWindow module
+==================
+
+.. automodule:: TrackWindow
+    :members:
+    :undoc-members:
+    :show-inheritance:

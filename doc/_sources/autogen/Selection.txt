@@ -1,0 +1,7 @@
+Selection module
+================
+
+.. automodule:: Selection
+    :members:
+    :undoc-members:
+    :show-inheritance:

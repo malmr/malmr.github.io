@@ -1,0 +1,7 @@
+WaveformCursor module
+=====================
+
+.. automodule:: WaveformCursor
+    :members:
+    :undoc-members:
+    :show-inheritance:

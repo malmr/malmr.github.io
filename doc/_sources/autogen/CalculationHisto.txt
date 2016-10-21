@@ -1,0 +1,7 @@
+CalculationHisto module
+=======================
+
+.. automodule:: CalculationHisto
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+PlotSpl module
+==============
+
+.. automodule:: PlotSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:

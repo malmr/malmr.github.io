@@ -1,0 +1,1441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EditorBackend package &mdash; SNARE 0.1.1a documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE 0.1.1a documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">EditorBackend package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.AnalyzeBuffer">EditorBackend.AnalyzeBuffer module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Audioplayer">EditorBackend.Audioplayer module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Buffer">EditorBackend.Buffer module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Calibrations">EditorBackend.Calibrations module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Channel">EditorBackend.Channel module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.MainBackend">EditorBackend.MainBackend module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Recorder">EditorBackend.Recorder module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Unpacker">EditorBackend.Unpacker module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.WavFile">EditorBackend.WavFile module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.WavFileWrite">EditorBackend.WavFileWrite module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.Waveform">EditorBackend.Waveform module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.WaveformBuffer">EditorBackend.WaveformBuffer module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.WaveformBufferChannel">EditorBackend.WaveformBufferChannel module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend.WaveformThread">EditorBackend.WaveformThread module</a></li>
+<li><a class="reference internal" href="#module-EditorBackend">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>EditorBackend package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/EditorBackend.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editorbackend-package">
+<h1>EditorBackend package<a class="headerlink" href="#editorbackend-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EditorBackend.AnalyzeBuffer">
+<span id="editorbackend-analyzebuffer-module"></span><h2>EditorBackend.AnalyzeBuffer module<a class="headerlink" href="#module-EditorBackend.AnalyzeBuffer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer">
+<em class="property">class </em><code class="descclassname">EditorBackend.AnalyzeBuffer.</code><code class="descname">AnalyzeBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>calibrations</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>When the user requests an analysis, all selected areas are composed to one NumPy array and stored here before
+an analysis widget picks it up. Also the calibration is added here.</p>
+<dl class="method">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.addSelection">
+<code class="descname">addSelection</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em>, <em>points</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.addSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a selection to the AnalyzeBuffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; A Channel object for reference.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection on that channel.</li>
+<li><strong>points</strong> &#8211; List of start and end points, describing the selection areas.</li>
+<li><strong>type</strong> &#8211; Type of analysis, e.g. &#8220;FFT&#8221;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.deleteChannel">
+<code class="descname">deleteChannel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.deleteChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a channel from this buffer. Donne with exceptions, because these data-points only exist if the analysis funnction has been used on this channel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; The Channel to delete.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.getBuffer">
+<code class="descname">getBuffer</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.getBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the interface for analysis widgets to access data. Before handover it is converted to a float type to
+avoid precision loss and calibrated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; The requested Channel.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection requested.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.newSelection">
+<code class="descname">newSelection</code><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.newSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.selectionChanged">
+<code class="descname">selectionChanged</code><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.selectionChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Audioplayer">
+<span id="editorbackend-audioplayer-module"></span><h2>EditorBackend.Audioplayer module<a class="headerlink" href="#module-EditorBackend.Audioplayer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Audioplayer.Audioplayer">
+<em class="property">class </em><code class="descclassname">EditorBackend.Audioplayer.</code><code class="descname">Audioplayer</code><span class="sig-paren">(</span><em>buffer</em>, <em>sampleRate</em>, <em>sampleWidth</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>This class takes care of audio playback via PyAudio. It also works in the block-wise manner like Buffer.
+It can switch between channels, but only one channel can be played at a time.</p>
+<dl class="method">
+<dt id="EditorBackend.Audioplayer.Audioplayer.callback">
+<code class="descname">callback</code><span class="sig-paren">(</span><em>in_data</em>, <em>frame_count</em>, <em>time_info</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyAudio callback, used to feed new samples for playback.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_data</strong> &#8211; See PyAudio documentation.</li>
+<li><strong>frame_count</strong> &#8211; See PyAudio documentation.</li>
+<li><strong>time_info</strong> &#8211; See PyAudio documentation.</li>
+<li><strong>status</strong> &#8211; See PyAudio documentation.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">See PyAudio documentation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Audioplayer.Audioplayer.isPlaying">
+<code class="descname">isPlaying</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.isPlaying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is it playing?</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if playback ongoing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Audioplayer.Audioplayer.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause the current playback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Audioplayer.Audioplayer.play">
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start playback from the last known position.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.Audioplayer.Audioplayer.sendPos">
+<code class="descname">sendPos</code><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.sendPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Audioplayer.Audioplayer.setPos">
+<code class="descname">setPos</code><span class="sig-paren">(</span><em>smp</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Audioplayer.Audioplayer.setPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the playback on the specified position and channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>smp</strong> &#8211; An integer representing the sample from which to start playing.</li>
+<li><strong>channel</strong> &#8211; A Channel object referring to the channel to play.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Buffer">
+<span id="editorbackend-buffer-module"></span><h2>EditorBackend.Buffer module<a class="headerlink" href="#module-EditorBackend.Buffer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Buffer.AudioBlock">
+<em class="property">class </em><code class="descclassname">EditorBackend.Buffer.</code><code class="descname">AudioBlock</code><span class="sig-paren">(</span><em>source</em>, <em>start</em>, <em>channel=0</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The Buffer&#8217;s audio data storage is organised in AudioBlocks. An AudioBlock does not necessarily contain sample data.
+If there is no sample data stored in the Audioblock, the AudioBlock knows how and where to get it from (has a
+reference to the WavFile-object). Sample data should only be accessed through the getData interface. That way, if
+no sample data is present, the AudioBlock will load it by itself. There is also an interface for releasing memory.</p>
+<dl class="method">
+<dt id="EditorBackend.Buffer.AudioBlock.free">
+<code class="descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock.free" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the data to free memory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.AudioBlock.getData">
+<code class="descname">getData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock.getData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface to retrieve raw sample data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A raw bytearray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.AudioBlock.isEmpty">
+<code class="descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock.isEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is it an EmptyBlock?</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is an EmptyBlock.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.AudioBlock.readdata">
+<code class="descname">readdata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock.readdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads data from the source and writes it to memory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.AudioBlock.setdata">
+<code class="descname">setdata</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.AudioBlock.setdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manually write data to the AudioBlock, without a source. (Used for Recording)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; A raw bytearray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EditorBackend.Buffer.Buffer">
+<em class="property">class </em><code class="descclassname">EditorBackend.Buffer.</code><code class="descname">Buffer</code><span class="sig-paren">(</span><em>sampleRate</em>, <em>sampleWidth</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>The Buffer class provides SNARE&#8217;s storage for audio data. Data can be accessed in a block-wise manner or via a list
+of selection points from TrackSelection. Data can be added by specifying a source WAVE-file or from the Recorder.</p>
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.addRecording">
+<code class="descname">addRecording</code><span class="sig-paren">(</span><em>deviceChannels</em>, <em>deviceName</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.addRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepares the buffer for receiving recording data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>deviceChannels</strong> &#8211; List of channels to record.</li>
+<li><strong>deviceName</strong> &#8211; Name of the device to record from.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Dictionary linking the numerical device channels with Channel objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.appendData">
+<code class="descname">appendData</code><span class="sig-paren">(</span><em>data</em>, <em>deviceChannel</em>, <em>length</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.appendData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for the recorder to add recorded data. Input data will be stored in the buffer and also written to disk
+with WavFileWrite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> &#8211; The input array, a raw bytearray.</li>
+<li><strong>deviceChannel</strong> &#8211; The device channel it is from.</li>
+<li><strong>length</strong> &#8211; and the length of data.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.closeRecording">
+<code class="descname">closeRecording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.closeRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the recording, which means that the corresponding WAVE-file will be completed. Then the buffer reopens
+the WAVE-file in read-mode. Therefore the type of channel is changed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.deleteChannel">
+<code class="descname">deleteChannel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.deleteChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the specified channel from the buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; The channel to remove.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.getArray">
+<code class="descname">getArray</code><span class="sig-paren">(</span><em>channel</em>, <em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.getArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Since a user analysis selection might consist of several marked areas, this method helps by returning an array
+from the blocked-buffer starting at &#8220;start&#8221; to &#8220;end&#8221;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>channel</strong> &#8211; The channel on which the selection was made.</li>
+<li><strong>start</strong> &#8211; The sample on which this portion of the selection starts.</li>
+<li><strong>end</strong> &#8211; The sample on which this portion of the selection ends.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A numpy array of unpacked sample data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.getBlock">
+<code class="descname">getBlock</code><span class="sig-paren">(</span><em>channel</em>, <em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.getBlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.getSelection">
+<code class="descname">getSelection</code><span class="sig-paren">(</span><em>channel</em>, <em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.getSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the user has selected the areas on the data that he wants to analyze, it would not make sense to transmit
+blocks. Instead the selected areas are extracted from their respective blocks and joined together to one numpy
+array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>channel</strong> &#8211; The channel on which the selection was made.</li>
+<li><strong>points</strong> &#8211; The list of start and end samples marking the selected areas.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A numpy array of unpacked sample data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Buffer.Buffer.loadWave">
+<code class="descname">loadWave</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.Buffer.loadWave" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the procedure to add a WAVE-file to the buffer. No data from the file is read. Only the right amount
+of empty Audioblocks is prepared. Data is only read from disk when needed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> &#8211; Full path to file to be loaded.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of newly created Channel objects.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.Buffer.Buffer.updateFromRecorder">
+<code class="descname">updateFromRecorder</code><a class="headerlink" href="#EditorBackend.Buffer.Buffer.updateFromRecorder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EditorBackend.Buffer.EmpytBlock">
+<em class="property">class </em><code class="descclassname">EditorBackend.Buffer.</code><code class="descname">EmpytBlock</code><span class="sig-paren">(</span><em>source</em>, <em>start</em>, <em>channel=0</em>, <em>arraySize=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.EmpytBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorBackend.Buffer.AudioBlock" title="EditorBackend.Buffer.AudioBlock"><code class="xref py py-class docutils literal"><span class="pre">EditorBackend.Buffer.AudioBlock</span></code></a></p>
+<p>Empty blocks are used when somehow data is requested form an area where the file already ends.</p>
+<dl class="method">
+<dt id="EditorBackend.Buffer.EmpytBlock.free">
+<code class="descname">free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Buffer.EmpytBlock.free" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is overwritten because deleting nothing would not make much sense.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Calibrations">
+<span id="editorbackend-calibrations-module"></span><h2>EditorBackend.Calibrations module<a class="headerlink" href="#module-EditorBackend.Calibrations" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Calibrations.Calibrations">
+<em class="property">class </em><code class="descclassname">EditorBackend.Calibrations.</code><code class="descname">Calibrations</code><a class="headerlink" href="#EditorBackend.Calibrations.Calibrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>Analysis in SNARE either use dBFs or the user selects an area in the recording/file that contains a 94dB/1kHz
+calibration tone. That way an analysis can be calibrated.</p>
+<dl class="method">
+<dt id="EditorBackend.Calibrations.Calibrations.addCalibration">
+<code class="descname">addCalibration</code><span class="sig-paren">(</span><em>channel</em>, <em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Calibrations.Calibrations.addCalibration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a calibration to the dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; The channel object the calibration refers to.</li>
+<li><strong>factor</strong> &#8211; The calibration factor.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.Calibrations.Calibrations.calibrationChanged">
+<code class="descname">calibrationChanged</code><a class="headerlink" href="#EditorBackend.Calibrations.Calibrations.calibrationChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Calibrations.Calibrations.getCalibration">
+<code class="descname">getCalibration</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Calibrations.Calibrations.getCalibration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the calibration for the given channel or one if there is no calibration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; The channel object the calibration refers to.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Channel">
+<span id="editorbackend-channel-module"></span><h2>EditorBackend.Channel module<a class="headerlink" href="#module-EditorBackend.Channel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Channel.Channel">
+<em class="property">class </em><code class="descclassname">EditorBackend.Channel.</code><code class="descname">Channel</code><span class="sig-paren">(</span><em>type</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Channel.Channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A helper class. instead of working with integer-channel numbers, work with an unique object reference, that might
+as well carry some additional information, like a channel name.</p>
+<dl class="method">
+<dt id="EditorBackend.Channel.Channel.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Channel.Channel.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>A getter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The name attribute of this channel.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.MainBackend">
+<span id="editorbackend-mainbackend-module"></span><h2>EditorBackend.MainBackend module<a class="headerlink" href="#module-EditorBackend.MainBackend" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.MainBackend.MainBackend">
+<em class="property">class </em><code class="descclassname">EditorBackend.MainBackend.</code><code class="descname">MainBackend</code><span class="sig-paren">(</span><em>sampleRate</em>, <em>sampleWidth</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>The main backend presents the collection of backend-objects, e.g. the main audio-data buffer, the recorder,
+audioplayer, the waveformbuffer et al. Those objects communicate with each other through the MainBackend.</p>
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.addAnalysis">
+<code class="descname">addAnalysis</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.addAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.addCalibration">
+<code class="descname">addCalibration</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.addCalibration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds (or updates) a calibration for</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Channel object the analysis refers to.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection, that contains the calibration selection.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.addTrack">
+<code class="descname">addTrack</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.addTrack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.configRecord">
+<code class="descname">configRecord</code><span class="sig-paren">(</span><em>device</em>, <em>channels</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.configRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>After InputSelectorDialog configured a recording. When configured it will add channel objects and tracks
+accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>device</strong> &#8211; Audio device to record from.</li>
+<li><strong>channels</strong> &#8211; Channels to record from that device.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.deleteChannel">
+<code class="descname">deleteChannel</code><span class="sig-paren">(</span><em>channel</em>, <em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.deleteChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a channel. Since the signal comes from TrackManager, the UI part of the channel has already been deleted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Delete data associated with this channel objects.</li>
+<li><strong>track</strong> (<a class="reference internal" href="EditorUI.html#module-EditorUI.TrackUI" title="EditorUI.TrackUI"><em>TrackUI</em></a>) &#8211; Track QWidget to delete from MainWindow.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.deselectAllReports">
+<code class="descname">deselectAllReports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.deselectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.exportReport">
+<code class="descname">exportReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.exportReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.newAnalysis">
+<code class="descname">newAnalysis</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em>, <em>type='FFT'</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.newAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new analysis or calibration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Channel object the analysis refers to.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection.</li>
+<li><strong>type</strong> &#8211; Analysis type of the selection.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.newSelection">
+<code class="descname">newSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.newSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new selection on the TrackManager.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.openWave">
+<code class="descname">openWave</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.openWave" title="Permalink to this definition">¶</a></dt>
+<dd><p>After the user selected a valid WAVE-file in the file dialog. Adds a track for every channel of the WAVE-file.
+:param fileName: Full path to file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.pauseRecord">
+<code class="descname">pauseRecord</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.pauseRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notifies all relevant objects about pausing the recording.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.removeTrack">
+<code class="descname">removeTrack</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.removeTrack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.selectAllReports">
+<code class="descname">selectAllReports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.selectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.startRecord">
+<code class="descname">startRecord</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.startRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notifies all relevant objects about starting a recortding.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.stopRecord">
+<code class="descname">stopRecord</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.stopRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notifies all relevant objects about closing the recording.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.updateAnalysesStatus">
+<code class="descname">updateAnalysesStatus</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.updateAnalysesStatus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.MainBackend.MainBackend.updateAnalysis">
+<code class="descname">updateAnalysis</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.updateAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates an existing analysis.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Channel object the analysis refers to.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection.</li>
+<li><strong>type</strong> &#8211; Analysis type of the selection.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.updateRecordingStatus">
+<code class="descname">updateRecordingStatus</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.updateRecordingStatus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.MainBackend.MainBackend.updateWaveformMessage">
+<code class="descname">updateWaveformMessage</code><a class="headerlink" href="#EditorBackend.MainBackend.MainBackend.updateWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Recorder">
+<span id="editorbackend-recorder-module"></span><h2>EditorBackend.Recorder module<a class="headerlink" href="#module-EditorBackend.Recorder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Recorder.Recorder">
+<em class="property">class </em><code class="descclassname">EditorBackend.Recorder.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>buffer</em>, <em>sampleRate</em>, <em>sampleWidth</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>This class provides an interface to a non-blocking pyaudio recording stream. The interleaved channels of the raw
+input stream are separated, collected to form blocks of a certain size and the resulting bytearray is sent to a
+buffer object. The status of the object is communicated through a signal and displayed at the status bar.</p>
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.callback">
+<code class="descname">callback</code><span class="sig-paren">(</span><em>in_data</em>, <em>frame_count</em>, <em>time_info</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PyAudio method called every time a chunckSize amount of samples have been recorded. The new samples are added
+to the temporary buffer until a blockSize is reached. At this point the new block is sent to the buffer and the
+temporary buffer is reset.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>in_data</strong> &#8211; see PyAudio Reference.</li>
+<li><strong>frame_count</strong> &#8211; see PyAudio Reference.</li>
+<li><strong>time_info</strong> &#8211; see PyAudio Reference.</li>
+<li><strong>status</strong> &#8211; see PyAudio Reference.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">see PyAudio Reference.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.isReady">
+<code class="descname">isReady</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.isReady" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is the Recorder object ready for a recording (device set)?</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if Recorder is ready to record.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is there a recording ongoing?</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if recording is ongoing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>deviceIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the given device for recording. Then set the object to be ready for recording.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deviceIndex</strong> &#8211; PyAudio device index.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses the recording and updates the status. Remaining data in the temporary buffer will not be sent to the
+buffer, but also will not be lost.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.record">
+<code class="descname">record</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the recording and updates the status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.Recorder.Recorder.sendRecPos">
+<code class="descname">sendRecPos</code><a class="headerlink" href="#EditorBackend.Recorder.Recorder.sendRecPos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.sendToBuffer">
+<code class="descname">sendToBuffer</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.sendToBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Before sending the unformatted bytearray to the buffer it is filtered for the channels. Wanted channels are
+separated, according to the same principle to solve the WAVE-file channel interweaving. Unwanted channels are
+ignored.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; Channel interweaved raw bytearray</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Recorder.Recorder.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Recorder.Recorder.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the recording: The last remaining contents of the temporary buffer a zero padded to match the blocksize
+and sent to the buffer. Then the object is set back to the ready for recording state.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.Recorder.Recorder.updateRecording">
+<code class="descname">updateRecording</code><a class="headerlink" href="#EditorBackend.Recorder.Recorder.updateRecording" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Unpacker">
+<span id="editorbackend-unpacker-module"></span><h2>EditorBackend.Unpacker module<a class="headerlink" href="#module-EditorBackend.Unpacker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Unpacker.Unpacker">
+<em class="property">class </em><code class="descclassname">EditorBackend.Unpacker.</code><code class="descname">Unpacker</code><span class="sig-paren">(</span><em>blockSize</em>, <em>sampleWidth</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Unpacker.Unpacker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>This class simplifies the conversion from the raw bytearray read from the WAVE-file, or received from the recording
+hardware to a NumPy array.</p>
+<dl class="method">
+<dt id="EditorBackend.Unpacker.Unpacker.unpack">
+<code class="descname">unpack</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Unpacker.Unpacker.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically select the correct unpack method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; Raw bytearray input</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Converted numpy array.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Unpacker.Unpacker.unpack16">
+<code class="descname">unpack16</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Unpacker.Unpacker.unpack16" title="Permalink to this definition">¶</a></dt>
+<dd><p>For 2 Bytes the unpack is simple with the python builtin &#8220;struct.unpack&#8221;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; Raw bytearray input</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Converted numpy array.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.Unpacker.Unpacker.unpack24">
+<code class="descname">unpack24</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Unpacker.Unpacker.unpack24" title="Permalink to this definition">¶</a></dt>
+<dd><p>For 3 Bytes is slighty more complicated. The buultin &#8220;struct.unpack&#8221; only works on even numbers of bytes,
+therefore the raw bytearray is padded with 1 Byte of zeros before converting it to a numpy array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; Raw bytearray input</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Converted numpy array.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.WavFile">
+<span id="editorbackend-wavfile-module"></span><h2>EditorBackend.WavFile module<a class="headerlink" href="#module-EditorBackend.WavFile" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.WavFile.WavFile">
+<em class="property">class </em><code class="descclassname">EditorBackend.WavFile.</code><code class="descname">WavFile</code><span class="sig-paren">(</span><em>fileName</em>, <em>sampleRate</em>, <em>sampleWidth</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<p>This class reads standard RIFF-WAVE-files and BWF-WAVE-files. Once successfully opened, raw audio data can be
+accessed in blocked segments by providing the channel number and a sample to start from. 16bit and 24bit files
+are supported as well as audio-files with an arbitrary number of channels.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>file = &#8220;test.wav&#8221;
+sampleRate = 44100
+sampleWidth = 2
+blockSize = 441000 # 10 seconds per block</p>
+<p>wav = WavFile(file, sampleRate, sampleWidth, blockSize)</p>
+<p>startSample = 30 * sampleRate # read 10 seconds starting from 0:30
+leftChannel = 0</p>
+<p>rawData = wav.getBlock(startSample, leftChannel)</p>
+<p>#rawData could now be fed to e.g. a pyaudio callback</p>
+</div></blockquote>
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.blockCount">
+<code class="descname">blockCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.blockCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the length of the audio stream in blocks. Full length of audiostream would be blockCount()*blockSize</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Length of audiostream in blocks, always rounded up.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.channelCount">
+<code class="descname">channelCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.channelCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the number of channels present in the WAVE-file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of channels</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.getBlock">
+<code class="descname">getBlock</code><span class="sig-paren">(</span><em>start</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.getBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read block wise raw data from wav-file. Meaning that this method will always return a full block, if necessary
+a zero-padded block or even an entirely empty block.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> &#8211; number of sample to start reading from. E.g. start = 88200 will read form 0:02s onwards.</li>
+<li><strong>channel</strong> &#8211; 0 -&gt; Left Channel, 1 -&gt; Rigth Channel, n -&gt; further channels</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns raw unformatted audio data as bytearray. This means that e.g. in an 24bit-file three
+consecutive bytearray elements form one sample.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.getFileInfo">
+<code class="descname">getFileInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.getFileInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>To access basic file-information. At the moment only sampleRate and sampleWidth</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Dictionary containing file information. Keys: &#8216;sampleRate&#8217;, &#8216;sampleWidth&#8217;.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.printHeader">
+<code class="descname">printHeader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.printHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints entire RIFF-Header section to shell.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFile.WavFile.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.WavFileWrite">
+<span id="editorbackend-wavfilewrite-module"></span><h2>EditorBackend.WavFileWrite module<a class="headerlink" href="#module-EditorBackend.WavFileWrite" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.WavFileWrite.WavFileWrite">
+<em class="property">class </em><code class="descclassname">EditorBackend.WavFileWrite.</code><code class="descname">WavFileWrite</code><span class="sig-paren">(</span><em>fileName</em>, <em>sampleRate</em>, <em>sampleWidth</em>, <em>channels</em>, <em>blocksize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFileWrite.WavFileWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>This class is used to write RIFF-WAVE-files when recording with SNARE. It supports 16bit or 24bit but only one
+channel. It opens (and if necessary overwrites) a wav file, writes a header (initially with a filesize of zero)
+and then is ready to receive blockwise updates of recorded samples to append to the file. On closing the file, the
+header will be updated to contain the right data block length.</p>
+<dl class="method">
+<dt id="EditorBackend.WavFileWrite.WavFileWrite.appendBlock">
+<code class="descname">appendBlock</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFileWrite.WavFileWrite.appendBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends a block of raw sample data to the file. Note that the header will not be updated until the file is
+closed. In case of a crash, all sample data is saved, but the file will look empty to most programs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> &#8211; A bytearray already in a format of interleaved raw integer samples</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFileWrite.WavFileWrite.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFileWrite.WavFileWrite.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finish the writing process by updating the header to contain correct size information. Then close Qt stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WavFileWrite.WavFileWrite.writeHeader">
+<code class="descname">writeHeader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFileWrite.WavFileWrite.writeHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the header with member attributes that already have the right byteformat.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.Waveform">
+<span id="editorbackend-waveform-module"></span><h2>EditorBackend.Waveform module<a class="headerlink" href="#module-EditorBackend.Waveform" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.Waveform.Waveform">
+<em class="property">class </em><code class="descclassname">EditorBackend.Waveform.</code><code class="descname">Waveform</code><span class="sig-paren">(</span><em>channel</em>, <em>startBlock</em>, <em>dataBlocks</em>, <em>numberOfPixmaps</em>, <em>dataSrc</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.Waveform.Waveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Merely a data structure to simplify the handling of waveforms. This class contains space for sample data,
+which might be rendered by the WaveformThread to a cooridnate-list, which then can be sent to a TrackWaveform object
+to be painted and display to the user. It also contains information about the channel it belongs to and its position
+and size on the timeline.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.WaveformBuffer">
+<span id="editorbackend-waveformbuffer-module"></span><h2>EditorBackend.WaveformBuffer module<a class="headerlink" href="#module-EditorBackend.WaveformBuffer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer">
+<em class="property">class </em><code class="descclassname">EditorBackend.WaveformBuffer.</code><code class="descname">WaveformBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>sampleWidth</em>, <em>blockSize</em>, <em>waveformHeight</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>At TrackWaveform only waveforms are stored that are currently displayed. To avoid the computationally intense
+rendering of new waveforms, every waveform that has been rendered will be stored in an object of this class.
+E.g. if a waveform was rendered and then the user changed the zoom-level, so that the TrackWaveform dropped all
+waveform objects, and then the user likes to return to the previous zoom-level, all waveforms are still available
+from the WaveformBuffer without the need to render again.
+WaveformBuffer takes a waveform request, looks up if it has been rendered already and either immediately returns
+the rendered waveform or creates an unrendered waveform to put on the stack of a render WaveformThread.</p>
+<dl class="method">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.addChannel">
+<code class="descname">addChannel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.addChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adding a channel in the backend will add a WaveformBufferChannel in this object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; Reference to a channel object to associate with the right sample data when accessing the buffer.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.addWaveform">
+<code class="descname">addWaveform</code><span class="sig-paren">(</span><em>waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return path for rendered waveforms. Will be transmitted through the MainBackend to the TrackManager.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>waveform</strong> &#8211; A rendered waveform-object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.deleteChannel">
+<code class="descname">deleteChannel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.deleteChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simply remove the WaveformBufferChannel that is associated with thc given Channel object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; s.a.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.formatWaveformMessage">
+<code class="descname">formatWaveformMessage</code><span class="sig-paren">(</span><em>load</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.formatWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot called from a WaveformBufferChannel&#8217;s render thread. Collects the current queue size from all threads
+(inside of WaveformBufferChannels), adds them up and sends a  message, which will be used to update the status
+bar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Channel from which the update was sent.</li>
+<li><strong>load</strong> &#8211; Current workload of that channel.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.getWaveform">
+<code class="descname">getWaveform</code><span class="sig-paren">(</span><em>channel</em>, <em>startBlock</em>, <em>dataBlocks</em>, <em>numberOfPixmaps</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.getWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request to return a rendered waveform. Simply relayed to the responsible WaveformbufferChannel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; Channel object linking to the responsible WaveformBufferChannel.</li>
+<li><strong>blockNumber</strong> &#8211; The block to be rendered.</li>
+<li><strong>width</strong> &#8211; Width of the waveform pixmap, equals zoom-level.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.returnWaveform">
+<code class="descname">returnWaveform</code><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.returnWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformBuffer.WaveformBuffer.updateWaveformMessage">
+<code class="descname">updateWaveformMessage</code><a class="headerlink" href="#EditorBackend.WaveformBuffer.WaveformBuffer.updateWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.WaveformBufferChannel">
+<span id="editorbackend-waveformbufferchannel-module"></span><h2>EditorBackend.WaveformBufferChannel module<a class="headerlink" href="#module-EditorBackend.WaveformBufferChannel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.WaveformBufferChannel.WaveformBufferChannel">
+<em class="property">class </em><code class="descclassname">EditorBackend.WaveformBufferChannel.</code><code class="descname">WaveformBufferChannel</code><span class="sig-paren">(</span><em>buffer</em>, <em>sampleWidth</em>, <em>blockSize</em>, <em>waveformHeight</em>, <em>channel</em>, <em>mutex</em>, <em>thread</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBufferChannel.WaveformBufferChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
+<p>This is added as a layer between WaveformBuffer and the rendering threads. It makes it easier to add and delete
+channels, also multiple threads can work on the rendering.</p>
+<dl class="method">
+<dt id="EditorBackend.WaveformBufferChannel.WaveformBufferChannel.addWaveform">
+<code class="descname">addWaveform</code><span class="sig-paren">(</span><em>waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBufferChannel.WaveformBufferChannel.addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return path for rendered pixmaps from the thread. Write into the dictionaries to avoid double renderings.
+Then free the AudioBlock to save memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>waveform</strong> &#8211; A rendered pixmap object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformBufferChannel.WaveformBufferChannel.getWaveform">
+<code class="descname">getWaveform</code><span class="sig-paren">(</span><em>startBlock</em>, <em>dataBlocks</em>, <em>numberOfPixmaps</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformBufferChannel.WaveformBufferChannel.getWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either check by the provided parameters if the waveform already exists or create an unrendered pixmap with
+the given parameters and data from the buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>blockNumber</strong> &#8211; Block number to have a pixmap of</li>
+<li><strong>width</strong> &#8211; Width of the requested pixmap equalling the zoom-level</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformBufferChannel.WaveformBufferChannel.returnWaveform">
+<code class="descname">returnWaveform</code><a class="headerlink" href="#EditorBackend.WaveformBufferChannel.WaveformBufferChannel.returnWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformBufferChannel.WaveformBufferChannel.updateWaveformMessage">
+<code class="descname">updateWaveformMessage</code><a class="headerlink" href="#EditorBackend.WaveformBufferChannel.WaveformBufferChannel.updateWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend.WaveformThread">
+<span id="editorbackend-waveformthread-module"></span><h2>EditorBackend.WaveformThread module<a class="headerlink" href="#module-EditorBackend.WaveformThread" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorBackend.WaveformThread.WaveformThread">
+<em class="property">class </em><code class="descclassname">EditorBackend.WaveformThread.</code><code class="descname">WaveformThread</code><span class="sig-paren">(</span><em>sampleWidth</em>, <em>blockSize</em>, <em>mutex</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QThread</span></code></p>
+<p>This class runs the computationally intensive rendering of sample data to waveform points list. It runs in its own
+thread. (It is not a real thread due to python&#8217;s GIL, but it still allows the User-Interface to be more responsive
+by switching between &#8220;threads&#8221;.)
+The samples to be rendered into waveforms are contained in the waveform object. The thread will get
+unrendered waveform objects loaded onto a queue and emit rendered waveforms through a signal. There is also a signal
+for communicating the current workload. Apart from that, there is no communication with the main thread.</p>
+<dl class="method">
+<dt id="EditorBackend.WaveformThread.WaveformThread.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for backend to add waveform objects to queue.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>waveform</strong> &#8211; A waveform object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformThread.WaveformThread.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the list of points to a pixmap drawing. In this setup will create a layering of Peak and RMS display.
+For close zoom levels it switches to the linear display and also uses spreads out the entire waveform-drawing
+over several pixmaps (subblocks) to account for a limited maximum size of QPixmaps. Finished pixmaps are sent
+to the backend through a signal. New: pixmap rendering has been moved to TrackWaveform.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformThread.WaveformThread.finishedWaveform">
+<code class="descname">finishedWaveform</code><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.finishedWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformThread.WaveformThread.points">
+<code class="descname">points</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>blocks</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method creates two lists containing coordinates for Drawing the waveform. The x-coordinates range
+from 0 to width-1. Y-coordinates represent the maximum or an average of the sample area. All coordinates are
+mirrored to create the usual symmetrical waveform shape. The algorithm was optimised for low memory usage.
+Even though the algorithm would be faster when operating on larger chunks of samples, python does not allow
+control over mallocs. A previous version of this algorithm had the problem that python would request new memory
+faster then it would free unused memory, (Although this algorithm would only need a static amount of memory)
+eventually reaching the memory limit for a 32bit-python. Especially with the version of this algorithm using
+numpy: Numpy cannot alter arrays in place, every operation on an array creates a copy, demanding new memory in
+big blocks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>width</strong> &#8211; Range of x-coordinates</li>
+<li><strong>height</strong> &#8211; Maximum for y-coordinates.</li>
+<li><strong>blocks</strong> &#8211; List of AudioBlocks to be used as data source</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Tuple of two lists, containing coordinates for the maximums-plot and the averages-plot</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.WaveformThread.WaveformThread.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method starts the thread. When started the thread will work on its queue and if empty check every second
+for new jobs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorBackend.WaveformThread.WaveformThread.updateMsg">
+<code class="descname">updateMsg</code><a class="headerlink" href="#EditorBackend.WaveformThread.WaveformThread.updateMsg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorBackend">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-EditorBackend" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Philipp Merz und Malte Merdes.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.1a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

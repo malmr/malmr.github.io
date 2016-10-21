@@ -1,0 +1,7 @@
+CalculationSpl module
+=====================
+
+.. automodule:: CalculationSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:

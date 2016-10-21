@@ -1,0 +1,7 @@
+CalculationData module
+======================
+
+.. automodule:: CalculationData
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+StartDiag module
+================
+
+.. automodule:: StartDiag
+    :members:
+    :undoc-members:
+    :show-inheritance:

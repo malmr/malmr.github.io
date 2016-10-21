@@ -1,0 +1,7 @@
+AnalyzeWidgetNavSpl module
+==========================
+
+.. automodule:: AnalyzeWidgetNavSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:

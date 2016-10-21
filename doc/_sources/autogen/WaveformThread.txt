@@ -1,0 +1,7 @@
+WaveformThread module
+=====================
+
+.. automodule:: WaveformThread
+    :members:
+    :undoc-members:
+    :show-inheritance:

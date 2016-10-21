@@ -1,0 +1,7 @@
+PlotBar module
+==============
+
+.. automodule:: PlotBar
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+Buffer module
+=============
+
+.. automodule:: Buffer
+    :members:
+    :undoc-members:
+    :show-inheritance:

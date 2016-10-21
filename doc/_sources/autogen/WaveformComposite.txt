@@ -1,0 +1,7 @@
+WaveformComposite module
+========================
+
+.. automodule:: WaveformComposite
+    :members:
+    :undoc-members:
+    :show-inheritance:

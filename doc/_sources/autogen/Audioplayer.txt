@@ -1,0 +1,7 @@
+Audioplayer module
+==================
+
+.. automodule:: Audioplayer
+    :members:
+    :undoc-members:
+    :show-inheritance:

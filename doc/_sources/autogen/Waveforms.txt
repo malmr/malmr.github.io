@@ -1,0 +1,7 @@
+Waveforms module
+================
+
+.. automodule:: Waveforms
+    :members:
+    :undoc-members:
+    :show-inheritance:

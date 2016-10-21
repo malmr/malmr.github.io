@@ -1,0 +1,7 @@
+TrackButtons module
+===================
+
+.. automodule:: TrackButtons
+    :members:
+    :undoc-members:
+    :show-inheritance:

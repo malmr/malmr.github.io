@@ -1,0 +1,7 @@
+AnalyzeWidgetFft module
+=======================
+
+.. automodule:: AnalyzeWidgetFft
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+AnalyzeWindow module
+====================
+
+.. automodule:: AnalyzeWindow
+    :members:
+    :undoc-members:
+    :show-inheritance:

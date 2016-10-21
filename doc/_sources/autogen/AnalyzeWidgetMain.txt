@@ -1,0 +1,7 @@
+AnalyzeWidgetMain module
+========================
+
+.. automodule:: AnalyzeWidgetMain
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+WidgetWaveform module
+=====================
+
+.. automodule:: WidgetWaveform
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+WaveformScene module
+====================
+
+.. automodule:: WaveformScene
+    :members:
+    :undoc-members:
+    :show-inheritance:

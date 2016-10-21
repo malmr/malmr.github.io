@@ -1,0 +1,7 @@
+WaveformSelections module
+=========================
+
+.. automodule:: WaveformSelections
+    :members:
+    :undoc-members:
+    :show-inheritance:

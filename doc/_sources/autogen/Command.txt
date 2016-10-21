@@ -1,0 +1,7 @@
+Command module
+==============
+
+.. automodule:: Command
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+WaveformTimeline module
+=======================
+
+.. automodule:: WaveformTimeline
+    :members:
+    :undoc-members:
+    :show-inheritance:

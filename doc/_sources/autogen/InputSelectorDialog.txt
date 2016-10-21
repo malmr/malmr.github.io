@@ -1,0 +1,7 @@
+InputSelectorDialog module
+==========================
+
+.. automodule:: InputSelectorDialog
+    :members:
+    :undoc-members:
+    :show-inheritance:

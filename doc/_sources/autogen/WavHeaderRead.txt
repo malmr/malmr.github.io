@@ -1,0 +1,7 @@
+WavHeaderRead module
+====================
+
+.. automodule:: WavHeaderRead
+    :members:
+    :undoc-members:
+    :show-inheritance:

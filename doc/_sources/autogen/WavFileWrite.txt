@@ -1,0 +1,7 @@
+WavFileWrite module
+===================
+
+.. automodule:: WavFileWrite
+    :members:
+    :undoc-members:
+    :show-inheritance:

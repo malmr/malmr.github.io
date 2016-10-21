@@ -1,0 +1,7 @@
+WaveformProcess module
+======================
+
+.. automodule:: WaveformProcess
+    :members:
+    :undoc-members:
+    :show-inheritance:

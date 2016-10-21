@@ -1,0 +1,7 @@
+PlotBarHisto module
+===================
+
+.. automodule:: PlotBarHisto
+    :members:
+    :undoc-members:
+    :show-inheritance:

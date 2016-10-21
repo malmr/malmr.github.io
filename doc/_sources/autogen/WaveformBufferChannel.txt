@@ -1,0 +1,7 @@
+WaveformBufferChannel module
+============================
+
+.. automodule:: WaveformBufferChannel
+    :members:
+    :undoc-members:
+    :show-inheritance:

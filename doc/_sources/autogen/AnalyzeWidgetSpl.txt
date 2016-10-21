@@ -1,0 +1,7 @@
+AnalyzeWidgetSpl module
+=======================
+
+.. automodule:: AnalyzeWidgetSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:

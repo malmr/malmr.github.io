@@ -1,0 +1,2283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>EditorUI package &mdash; SNARE 0.1.1a documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE 0.1.1a documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <!-- Local TOC -->
+                <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">EditorUI package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackAbstract">EditorUI.TrackAbstract module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackButtons">EditorUI.TrackButtons module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackCursor">EditorUI.TrackCursor module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackData">EditorUI.TrackData module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackManager">EditorUI.TrackManager module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackMark">EditorUI.TrackMark module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackOverview">EditorUI.TrackOverview module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackSelection">EditorUI.TrackSelection module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackTimeline">EditorUI.TrackTimeline module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackUI">EditorUI.TrackUI module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackView">EditorUI.TrackView module</a></li>
+<li><a class="reference internal" href="#module-EditorUI.TrackWaveform">EditorUI.TrackWaveform module</a></li>
+<li><a class="reference internal" href="#module-EditorUI">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>EditorUI package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/EditorUI.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editorui-package">
+<h1>EditorUI package<a class="headerlink" href="#editorui-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EditorUI.TrackAbstract">
+<span id="editorui-trackabstract-module"></span><h2>EditorUI.TrackAbstract module<a class="headerlink" href="#module-EditorUI.TrackAbstract" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackAbstract.TrackAbstract">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackAbstract.</code><code class="descname">TrackAbstract</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>TrackAbstract is the superclass from which most elements or layers of a Track inherit. That way they all share an
+identical interface based around Qt&#8217;s signal-slot-concept. The signals and slots all have defined connections to
+their respective slots and signals of the parent object. Therefore, if an object of a class inherited from
+TrackAbstract creates another object that is also from a class that inherits TrackAbstract, their interface will
+automatically be connected in the way described here. This allows for an easy layering of objects, without any
+boilerplate connection making code whilst not breaking encapsulation rules. See the overall documentation of SNARE
+for a more detailed explanation on this design-pattern.</p>
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_addWaveform">
+<code class="descname">sig_addWaveform</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_analyze">
+<code class="descname">sig_analyze</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_analyze" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_delete">
+<code class="descname">sig_delete</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_editSelection">
+<code class="descname">sig_editSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_editSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_enableSelection">
+<code class="descname">sig_enableSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_enableSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_endSelection">
+<code class="descname">sig_endSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_endSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_finishSelection">
+<code class="descname">sig_finishSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_finishSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_keyEnter">
+<code class="descname">sig_keyEnter</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_keyEnter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_keyRelease">
+<code class="descname">sig_keyRelease</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_keyRelease" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_mouseDoubleClick">
+<code class="descname">sig_mouseDoubleClick</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_mouseDoubleClick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_mouseMove">
+<code class="descname">sig_mouseMove</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_mouseMove" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_mousePress">
+<code class="descname">sig_mousePress</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_mousePress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_mouseRelease">
+<code class="descname">sig_mouseRelease</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_mouseRelease" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_moveSelection">
+<code class="descname">sig_moveSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_moveSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_playpause">
+<code class="descname">sig_playpause</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_playpause" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_redraw">
+<code class="descname">sig_redraw</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_redraw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_requestMark">
+<code class="descname">sig_requestMark</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_requestMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_requestWaveform">
+<code class="descname">sig_requestWaveform</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_requestWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_selectionChange">
+<code class="descname">sig_selectionChange</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_selectionChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_setMark">
+<code class="descname">sig_setMark</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_setMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_setPlaying">
+<code class="descname">sig_setPlaying</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_setPlaying" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_setSelection">
+<code class="descname">sig_setSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_setSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_setView">
+<code class="descname">sig_setView</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_setView" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_skipBackward">
+<code class="descname">sig_skipBackward</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_skipBackward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_skipForward">
+<code class="descname">sig_skipForward</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_skipForward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_startSelection">
+<code class="descname">sig_startSelection</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_startSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_update">
+<code class="descname">sig_update</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_viewChanged">
+<code class="descname">sig_viewChanged</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_viewChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_zoomIn">
+<code class="descname">sig_zoomIn</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_zoomIn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.sig_zoomOut">
+<code class="descname">sig_zoomOut</code><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.sig_zoomOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_addWaveform">
+<code class="descname">slo_addWaveform</code><span class="sig-paren">(</span><em>Waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackWaveform.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Waveform</strong> &#8211; a Waveform-object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_analyze">
+<code class="descname">slo_analyze</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_analyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For pressing &#8220;Analyze&#8221; at TrackButtons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_delete">
+<code class="descname">slo_delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A request from TrackButtons to delete this track.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_editSelection">
+<code class="descname">slo_editSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_editSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For setting the selection state to &#8220;unlocked&#8221;. (Lock symbol at
+TrackButtons)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_enableSelection">
+<code class="descname">slo_enableSelection</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_enableSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackSelection, it is one of four to
+control the state machine of TrackSelection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; Enter False to block the selection from changes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_endSelection">
+<code class="descname">slo_endSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_endSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackSelection, it is one of four to
+control the state machine of TrackSelection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+</tr>
+</tbody>
+</table>
+<p>position</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_finishSelection">
+<code class="descname">slo_finishSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_finishSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For setting the selection state to &#8220;locked&#8221;. (Lock symbol at
+TrackButtons)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_keyEnter">
+<code class="descname">slo_keyEnter</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_keyEnter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any keyboard event triggered on any layer of the Track and sends
+it through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; Qt key event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_keyRelease">
+<code class="descname">slo_keyRelease</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_keyRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any keyboard event triggered on any layer of the Track and sends
+it through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; Qt key event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_mouseDoubleClick">
+<code class="descname">slo_mouseDoubleClick</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_mouseDoubleClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any mouse event triggered on any layer of the Track and sends it
+through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_mouseMove">
+<code class="descname">slo_mouseMove</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_mouseMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any mouse event triggered on any layer of the Track and sends it
+through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_mousePress">
+<code class="descname">slo_mousePress</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_mousePress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any mouse event triggered on any layer of the Track and sends it
+through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_mouseRelease">
+<code class="descname">slo_mouseRelease</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_mouseRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Catches any mouse event triggered on any layer of the Track and sends it
+through all layers to TrackManager where it will be processed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_moveSelection">
+<code class="descname">slo_moveSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_moveSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackSelection, it is one of four to
+control the state machine of TrackSelection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+</tr>
+</tbody>
+</table>
+<p>position</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_playpause">
+<code class="descname">slo_playpause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_playpause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For pressing play or pause (a switch button) at TrackButtons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child objects. An actual implementation can be found at TrackSelection, TrackWaveform
+et al.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; New zoom-level</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_requestMark">
+<code class="descname">slo_requestMark</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_requestMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A request from TrackButtons to place a mark on the current TrackCursor
+position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_requestWaveform">
+<code class="descname">slo_requestWaveform</code><span class="sig-paren">(</span><em>block</em>, <em>widthPreScaling</em>, <em>height</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_requestWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A signal from TrackWaveform, requesting the backend to render a specific
+waveform pixmap. The channel association is added at TrackManager.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>block</strong> &#8211; The block to be rendered.</li>
+<li><strong>widthPreScaling</strong> &#8211; The width to fit the pixmap of one block in. Therefore the width equals the zoom-level, since the blocksize is static.</li>
+<li><strong>height</strong> &#8211; Height of the pixmap.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_selectionChange">
+<code class="descname">slo_selectionChange</code><span class="sig-paren">(</span><em>selectionName</em>, <em>analysisType</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_selectionChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. Triggered when one of the dropdown menus at TrackButtons changed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selectionName</strong> &#8211; Name of the new selection.</li>
+<li><strong>analysisType</strong> &#8211; Name of the new analysis type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_setMark">
+<code class="descname">slo_setMark</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_setMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackMarks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Sample on which to put a mark</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_setPlaying">
+<code class="descname">slo_setPlaying</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_setPlaying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is the play/pause-button of
+TrackButtons. It is necessary to display the right playback state on each channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; True if playing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_setSelection">
+<code class="descname">slo_setSelection</code><span class="sig-paren">(</span><em>selectionName</em>, <em>analysisType</em>, <em>selection</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_setSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackSelection and TrackButtons.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selectionName</strong> &#8211; Name of the selection to switch to.</li>
+<li><strong>analysisType</strong> &#8211; Name of the type of analysis associated with the current selection.</li>
+<li><strong>selection</strong> &#8211; Start and end samples of the actual selection.</li>
+<li><strong>state</strong> &#8211; Lock state of the selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_setView">
+<code class="descname">slo_setView</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_setView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackView.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QRectF</strong> &#8211; A rectangle describing the part of the QGraphicScene to display.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_skipBackward">
+<code class="descname">slo_skipBackward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_skipBackward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A request from TrackButtons to skip to the previous mark.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_skipForward">
+<code class="descname">slo_skipForward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_skipForward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A request from TrackButtons to skip to the next mark.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_startSelection">
+<code class="descname">slo_startSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_startSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path is TrackSelection, it is one of four to
+control the state machine of TrackSelection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+</tr>
+</tbody>
+</table>
+<p>position</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_update">
+<code class="descname">slo_update</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to child-objects. The destination of this signal-path are all objects related to the waveform
+display, e.g. TrackWaveform and TrackTimeline.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; Position in samples around which to update the view and scene.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_viewChanged">
+<code class="descname">slo_viewChanged</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_viewChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. A signal triggered when the user changed the view by scrolling or
+dragging.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QRectF</strong> &#8211; The rectangle inside the scene that is now displayed by the view.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_zoomIn">
+<code class="descname">slo_zoomIn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_zoomIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For pressing &#8220;+&#8221; at TrackButtons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackAbstract.TrackAbstract.slo_zoomOut">
+<code class="descname">slo_zoomOut</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackAbstract.TrackAbstract.slo_zoomOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relays the signal to the parent object. For pressing &#8220;-&#8221; at TrackButtons.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackButtons">
+<span id="editorui-trackbuttons-module"></span><h2>EditorUI.TrackButtons module<a class="headerlink" href="#module-EditorUI.TrackButtons" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackButtons.TrackButtons">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackButtons.</code><code class="descname">TrackButtons</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>Each Track is accompanied by a selection of buttons on the left side. They are implemented in this class.
+All signals are automatically relayed to the managing backend class by the principle described in TrackAbstract.
+To function properly the files &#8220;EditorUI/Lock.png&#8221;, &#8220;Marker.png&#8221; and &#8220;EditorUI/Unlock.png&#8221; need to be available.</p>
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>A toggle switch for the lock symbol</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.selectionChange">
+<code class="descname">selectionChange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.selectionChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>An in between slot triggered by changing one of the dropdown-menus, gathers relevant information before
+triggering the sig_selectionChange that is connected to the command chain.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the zoom level label.
+:param factor: New zoom factor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.slo_setPlaying">
+<code class="descname">slo_setPlaying</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.slo_setPlaying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the &#8220;play&#8221;-buttons icon to represent the playback state of this channel.
+:param bool: True if playback is on. (Display &#8220;pause&#8221;-icon)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.slo_setSelection">
+<code class="descname">slo_setSelection</code><span class="sig-paren">(</span><em>selectionName</em>, <em>analysisType</em>, <em>selection</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.slo_setSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the selection has been changed by the user at one track or by the program, the new state is synchronised over
+all tracks. This means the name of the selection, the analysis type, selection points and selection state are
+sent to each track. In TrackButtons the dropdown menus have to be changed accordingly. (The other endpoint of
+this command chain can be found at TrackSelection.) There is one special case: selectionName &#8220;Calib.&#8221; is reserved
+for the Calibration selection and causes the analysis type dropdown menu to grey out.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selectionName</strong> &#8211; Name of the selection to switch to. In case it doesn&#8217;t exist, a new selection is added.</li>
+<li><strong>analysisType</strong> &#8211; Name of the type of analysis associated with the current selection.</li>
+<li><strong>selection</strong> &#8211; Start and end-samples of the actual selection. Not needed here, see TrackSelection.</li>
+<li><strong>state</strong> &#8211; Lock state of the current selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackCursor">
+<span id="editorui-trackcursor-module"></span><h2>EditorUI.TrackCursor module<a class="headerlink" href="#module-EditorUI.TrackCursor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackCursor.TrackCursor">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackCursor.</code><code class="descname">TrackCursor</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em>, <em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackCursor.TrackCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackCursor draws a vertical line on the scene to mark the current position of playback on the timeline. It needs to
+be stacked on top of a TrackView object to have the extended interface containing a scene.</p>
+<dl class="method">
+<dt id="EditorUI.TrackCursor.TrackCursor.setCursor">
+<code class="descname">setCursor</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackCursor.TrackCursor.setCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public. The only way to set the cursor position is from outside.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Requested cursor position in samples. Automatic conversion from samples to the actual position in</td>
+</tr>
+</tbody>
+</table>
+<p>pixels on screen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackCursor.TrackCursor.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackCursor.TrackCursor.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusting the cursor position whenever the zoom-level changes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; The new zoom-factor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackData">
+<span id="editorui-trackdata-module"></span><h2>EditorUI.TrackData module<a class="headerlink" href="#module-EditorUI.TrackData" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackData.TrackData">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackData.</code><code class="descname">TrackData</code><span class="sig-paren">(</span><em>selectionNames</em>, <em>analysisTypes</em>, <em>channel</em>, <em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>All data collected trough the Track User Interface will be stored here. This allows for easier communication with
+other backend objects. The TrackManager stores all invisible data in here (e.g. selections that are currently not
+active) and loads it back from here when needed (e.g. going back to a previously edited selection)
+Since everything relevant to the state of one track is concentrated in this class, it&#8217;ll make it easier to implement
+a save/load feature in future releases.</p>
+<dl class="docutils">
+<dt>The full set of data for one track includes:</dt>
+<dd><ul class="first last simple">
+<li>last cursor position</li>
+<li>all selections, with start/end points, name, analysis type and lock state</li>
+<li>all marks on the timeline</li>
+<li>reference to the backend-channel it is connected to</li>
+<li>reference to the user interface element</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.addSelection">
+<code class="descname">addSelection</code><span class="sig-paren">(</span><em>selectionName</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.addSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepares the data structure for an additional selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>selectionName</strong> &#8211; Name of the selection. Must be unique.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.getCurrentSelection">
+<code class="descname">getCurrentSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.getCurrentSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for the TrackManager to load back a selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a tuple of four elements containing the name, points, lock-state and the analysis type of the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.getLastPos">
+<code class="descname">getLastPos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.getLastPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple getter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The last stored cursor position in samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.getNextMark">
+<code class="descname">getNextMark</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.getNextMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow jumping forward from one position to the nearest mark.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; position in samples from which to look for the next mark</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">sample position of the nearest mark in forward direction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.getPreviousMark">
+<code class="descname">getPreviousMark</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.getPreviousMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow jumping backward from one position to the nearest mark.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; position in samples from which to look for the next mark</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">sample position of the nearest mark in backward direction.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.isPlaying">
+<code class="descname">isPlaying</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.isPlaying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inform caller of this channel&#8217;s playback state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Bool, True if channel is on playback.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.setCurrentSelection">
+<code class="descname">setCurrentSelection</code><span class="sig-paren">(</span><em>selectionName</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.setCurrentSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple setter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>selectionName</strong> &#8211; Name of the selection to switch to. Must exist, otherwise untreated KeyError exceptions
+occur.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.setLastPos">
+<code class="descname">setLastPos</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.setLastPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple setter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Update the last cursor position to this in samples.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.setMark">
+<code class="descname">setMark</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.setMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a mark to the list. Deleting of marks not yet available.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Position of the mark in samples</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.setPlaying">
+<code class="descname">setPlaying</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.setPlaying" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember if this channel is on playback.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; True if playback is on</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackData.TrackData.updateCurrentSelection">
+<code class="descname">updateCurrentSelection</code><span class="sig-paren">(</span><em>points</em>, <em>state=None</em>, <em>analysisType=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackData.TrackData.updateCurrentSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores adjustments made to the current selection. E.g. when the analysis type has been changed or the selection
+area (in start/end-points)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>points</strong> &#8211; Updated list of start and end samples of the selection areas</li>
+<li><strong>state</strong> &#8211; Updated lock-state</li>
+<li><strong>analysisType</strong> &#8211; Updated analysis type</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackManager">
+<span id="editorui-trackmanager-module"></span><h2>EditorUI.TrackManager module<a class="headerlink" href="#module-EditorUI.TrackManager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackManager.TrackManager">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackManager.</code><code class="descname">TrackManager</code><span class="sig-paren">(</span><em>analyses</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>The TrackManager provides the connection between the editor area of SNARE and the MainBackend. Also it defines the
+behaviour of the entire editor area. An editor element (TrackUI) does not contain any logic, it merely sends all
+input from the user to the TrackManager and receives its commands from the TrackManager. Therefore a TrackUI object
+without the TrackManager does not respond to any input. This way user input, processing and display are separated
+and the definition the editor area&#8217;s behaviour is concentrated in this class. For a more detailed explanation on
+the underlying design principle, see the overall documentation of SNARE.</p>
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.addChannel">
+<code class="descname">addChannel</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.addChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called from backend. Creates a new TrackUI and TrackData for the given channel. Everything will be linked
+automatically.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>channel</strong> &#8211; A channel object referring to the channel to be displayed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.addSelection">
+<code class="descname">addSelection</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.addSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.addTrack">
+<code class="descname">addTrack</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.addTrack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.closeRecordings">
+<code class="descname">closeRecordings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.closeRecordings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A slot called from the backend to notify that the recording has been finished. The track will then display the
+file where the recording has been store instead of the source audio device. (To be implemented)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.deleteChannel">
+<code class="descname">deleteChannel</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.deleteChannel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.getWaveform">
+<code class="descname">getWaveform</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.getWaveform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.newSelection">
+<code class="descname">newSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.newSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>A slot called from the backend to add a selection. It will appear on the TrackButtons&#8217; dropdown menu and have
+the last added analysis widget as default selected.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.playerPause">
+<code class="descname">playerPause</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.playerPause" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.playerPlay">
+<code class="descname">playerPlay</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.playerPlay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EditorUI.TrackManager.TrackManager.setPlayerPosition">
+<code class="descname">setPlayerPosition</code><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.setPlayerPosition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.setRecording">
+<code class="descname">setRecording</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.setRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>A slot called from the backend to notify of a changed recording status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; True if there is a recording ongoing.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_addWaveform">
+<code class="descname">slo_addWaveform</code><span class="sig-paren">(</span><em>waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the place where rendered waveforms from the backend are processed. They are filtered according to the
+channel they belong to and passed on to the corresponding Track.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>waveform</strong> &#8211; A waveform object containing a pixmap.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_analyze">
+<code class="descname">slo_analyze</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_analyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when the &#8220;analyze&#8221;-button was pressed. The method gathers the selection points/area (in samples)
+and the relevant channel-reference and passes the information to the backend via the &#8220;addSelection&#8221; signal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_delete">
+<code class="descname">slo_delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by pressing the &#8220;X&#8221;-button. Deletion is only possible when there is no backend processing active
+(playback or recording) to reduce complexity. The user interface elements are removed and the remaining objects
+are deleted. Then a signal is emitted to also remove this channel from the backend.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_editSelection">
+<code class="descname">slo_editSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_editSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>This loops back the signal to unblock a selection. Could be changed e.g. to block all Selections with one event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_finishSelection">
+<code class="descname">slo_finishSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_finishSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>This loops back the signal to block a selection. Could be changed e.g. to block all Selections with one event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_keyEnter">
+<code class="descname">slo_keyEnter</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_keyEnter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives any keyboard press event from any area of the track. There are two inputs filtered at the moment:
+&#8220;M&#8221; to set a mark and &#8220;Shift&#8221; to enter drag mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; Qt type containing the key pressed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_keyRelease">
+<code class="descname">slo_keyRelease</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_keyRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives any keyboard release event from any area of the track. There is only one input filtered at the moment:
+&#8220;Shift&#8221; to leave drag mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; Qt type containing the key released.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_mouseDoubleClick">
+<code class="descname">slo_mouseDoubleClick</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_mouseDoubleClick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by a double click on TrackView. Places the TrackCursor on the requested position. The received
+position is translated to the position on the scene and then to samples. The value is stored in the TrackData
+object and the signal to set the cursor is emitted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type containing the position on the scene where the click event
+was triggered</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_mouseMove">
+<code class="descname">slo_mouseMove</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_mouseMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by a mouse movement on TrackView. The signal is multiplied to all tracks and used to control the
+selection rectangles. It would also be possible to loop back the signal to only one track instead of having
+synchronised selections on all tracks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type containing the position on the scene, where the event was
+triggered.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_mousePress">
+<code class="descname">slo_mousePress</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_mousePress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by a mouse press on TrackView. The signal is multiplied to all tracks and used to control the
+selection rectangles. It would also be possible to loop back the signal to only one track instead of having
+synchronised selections on all tracks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type containing the position on the scene, where the event was
+triggered.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_mouseRelease">
+<code class="descname">slo_mouseRelease</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_mouseRelease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by a mouse release on TrackView. The signal is multiplied to all tracks and used to control the
+selection rectangles. It would also be possible to loop back the signal to only one track instead of having
+synchronised selections on all tracks.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt mouse event type containing the position on the scene, where the event was
+triggered.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_playpause">
+<code class="descname">slo_playpause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_playpause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Behaviour when pressing the &#8220;play/pause&#8221; button. (Or triggering the same event possibly with a key)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_requestMark">
+<code class="descname">slo_requestMark</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_requestMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by pressing &#8220;M&#8221; or the marker button on TrackButtons. The last position/sample (the cursor position)
+is retrieved from TrackData for the active channel and a mark is then set on this position for  all channels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_requestWaveform">
+<code class="descname">slo_requestWaveform</code><span class="sig-paren">(</span><em>startBlock</em>, <em>dataBlocks</em>, <em>numberOfPixmaps</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_requestWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the slot used by TrackWaveform to request all needed waveforms for the current position and zoom level.
+Since a Track element does not know its channel, this information is added here, before the signal gets relayed
+to the backend.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>block</strong> &#8211; The requested block.</li>
+<li><strong>widthPreScaling</strong> &#8211; The width of the requested pixmap, equalling the zoom level.</li>
+<li><strong>height</strong> &#8211; Height of the pixmap</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_selectionChange">
+<code class="descname">slo_selectionChange</code><span class="sig-paren">(</span><em>selectionName</em>, <em>analysisType</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_selectionChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered when the user has made a change to one of the dropdown menus on TrackButtons. The selection areas of
+each track are stored in TrackData, the new selection areas are loaded and the state of the dropdown-menus is
+synchronized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selectionName</strong> &#8211; Name of the selection to switch to.</li>
+<li><strong>analysisType</strong> &#8211; Name of the analysis type to switch to.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_skipBackward">
+<code class="descname">slo_skipBackward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_skipBackward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request from a TrackUI object to move the cursor the next mark in backward direction. Positions are all read
+from the corresponding TrackData object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_skipForward">
+<code class="descname">slo_skipForward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_skipForward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request from a TrackUI object to move the cursor the next mark in forward direction. Positions are all read from
+the corresponding TrackData object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_viewChanged">
+<code class="descname">slo_viewChanged</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_viewChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by any change on TrackView, e.g. by dragging or scrolling in the view widget. The changes are simply
+synchronised. The signal is not sent back to the sender object to avoid an infinite loop.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QRectF</strong> &#8211; Portion of the scene to display.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_zoomIn">
+<code class="descname">slo_zoomIn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_zoomIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by pressing the &#8220;+&#8221;-button. The zoom range is limited and the steps are selected in a way that they
+are equal in both directions: (1.25)^-1 = 0.8 and one can always return to exactly one step no rounding errors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.slo_zoomOut">
+<code class="descname">slo_zoomOut</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.slo_zoomOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggered by pressing the &#8220;-&#8220;-button. The zoom range is limited and the steps are selected in a way that they
+are equal in both directions: (1.25)^-1 = 0.8 and one can always return to exactly one step no rounding errors.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.updateFromRecorder">
+<code class="descname">updateFromRecorder</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.updateFromRecorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>When recording, the backend will update the TrackManager on the currently recorded position. E.g. to keep
+scrolling with the recording progress.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Last recorded sample/position</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.updateRecording">
+<code class="descname">updateRecording</code><span class="sig-paren">(</span><em>int</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.updateRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Legayc interface. Required. Not used anymore.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>int</strong> &#8211; not elefant</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackManager.TrackManager.updateSmp">
+<code class="descname">updateSmp</code><span class="sig-paren">(</span><em>smp</em>, <em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager.updateSmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>A slot to be called from the backend. When the Audioplayer is running it regularly send an update containing
+which sample on which channel was played. The last position is saved in the corresponding TrackData object ans
+the cursor is moved accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>smp</strong> &#8211; Playback position in samples on update time.</li>
+<li><strong>channel</strong> &#8211; A channel-object referring to the channel currently on playback.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackMark">
+<span id="editorui-trackmark-module"></span><h2>EditorUI.TrackMark module<a class="headerlink" href="#module-EditorUI.TrackMark" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackMark.TrackMark">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackMark.</code><code class="descname">TrackMark</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em>, <em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackMark.TrackMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackMark draws red, dotted, vertical lines on the scene to mark position that the user selected by pressing &#8220;M&#8221;. It
+needs to be stacked on top of a TrackView object to have the extended interface containing a scene.
+The drawing process works in a similar way to TrackWaveform and TrackTimeline. See slo_update.</p>
+<dl class="method">
+<dt id="EditorUI.TrackMark.TrackMark.paintBlock">
+<code class="descname">paintBlock</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackMark.TrackMark.paintBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates which marks are inside the requested block and draws them as QLineF on the scene.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> &#8211; Number of the block to paint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackMark.TrackMark.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackMark.TrackMark.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>A zoom-event will reset the object and trigger a full repaint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; New zoom-factor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackMark.TrackMark.slo_setMark">
+<code class="descname">slo_setMark</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackMark.TrackMark.slo_setMark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot to set a mark at the specified position. After storing the position, the pixmap will be renewed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Position in samples, converted automatically to the actual pixel/on-screen position</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackMark.TrackMark.slo_update">
+<code class="descname">slo_update</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackMark.TrackMark.slo_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class treats the painting area as divided into blocks. From the given position the next three blocks in each
+direction are calculated. Then, if a block has not been already painted, it will be painted. This way only the
+visible portion of the scene has to be painted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; position in pixels around which to paint blocks.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackOverview">
+<span id="editorui-trackoverview-module"></span><h2>EditorUI.TrackOverview module<a class="headerlink" href="#module-EditorUI.TrackOverview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackOverview.TrackOverview">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackOverview.</code><code class="descname">TrackOverview</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.mouseEvent">
+<code class="descname">mouseEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.mouseEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.setArea">
+<code class="descname">setArea</code><span class="sig-paren">(</span><em>start</em>, <em>width</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.setArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_mouseDoubleClick">
+<code class="descname">slo_mouseDoubleClick</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_mouseDoubleClick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_mouseMove">
+<code class="descname">slo_mouseMove</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_mouseMove" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_mousePress">
+<code class="descname">slo_mousePress</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_mousePress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_mouseRelease">
+<code class="descname">slo_mouseRelease</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_mouseRelease" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.slo_setView">
+<code class="descname">slo_setView</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.slo_setView" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.updateMaxLength">
+<code class="descname">updateMaxLength</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.updateMaxLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackOverview.TrackOverview.updateRectangle">
+<code class="descname">updateRectangle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackOverview.TrackOverview.updateRectangle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackSelection">
+<span id="editorui-trackselection-module"></span><h2>EditorUI.TrackSelection module<a class="headerlink" href="#module-EditorUI.TrackSelection" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackSelection.TrackSelection">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackSelection.</code><code class="descname">TrackSelection</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em>, <em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackSelection provides an intuitive way for the user to select areas in the waveform view. The user can simply draw
+by holding the left mouse button a green rectangle, which is added to the selection or by holding the right mouse
+button a red rectangle, which is subtracted from the existing selection area (where there is an intersection)
+The Object needs to be stacked on top of a TrackView object to have the extended interface containing a scene.</p>
+<p>The implementation models the desired behaviour with a state machine. State transitions are triggered by several
+control slots.</p>
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.EndToIdle">
+<code class="descname">EndToIdle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.EndToIdle" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Cleaning up variables and returning the machine to the &#8220;Idle&#8221; state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.FinishToIdle">
+<code class="descname">FinishToIdle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.FinishToIdle" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Returning from the &#8220;Blocked&#8221; state to the &#8220;Idle&#8221; state. The cross pattern of the selection
+will be removed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.IdleToFinish">
+<code class="descname">IdleToFinish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.IdleToFinish" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Setting the machine to the blocked state. The selection will be marked as blocked by applying
+a pattern. It will not respond to any mouse input until set back to &#8220;Idle&#8221;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.IdleToStart">
+<code class="descname">IdleToStart</code><span class="sig-paren">(</span><em>x</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.IdleToStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Starts the rectangle by defining the type and start point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>x</strong> &#8211; Position of start</li>
+<li><strong>type</strong> &#8211; &#8220;Add&#8221; or &#8220;Remove&#8221; type of selection rectangle</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.MoveToEnd">
+<code class="descname">MoveToEnd</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.MoveToEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Triggered by releasing the mouse button. The last provisional end point of the selection
+becomes a definite one. Subsequently the fully defined input rectangle will be processed to intersect with
+the existing selection rectangles and sets the machine to the &#8220;End&#8221; state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> &#8211; Last position of the end point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.MoveToMove">
+<code class="descname">MoveToMove</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.MoveToMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Updates the provisional end point of the rectangle for each mouse move event. Also redraws
+the rectangle accordingly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> &#8211; Updated position of the provisional end point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.StartToIdle">
+<code class="descname">StartToIdle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.StartToIdle" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. Returns the machine to &#8220;Idle&#8221; state when no movement has occurred to draw a rectangle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.StartToMove">
+<code class="descname">StartToMove</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.StartToMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>State transition. After the start point has been set, now after one mouse move event, an provisional end point
+is known, which is enough to draw the rectangle for the first time. The type has been set by a previous
+transition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> &#8211; Position of the provisional end point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.addSelection">
+<code class="descname">addSelection</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.addSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>This processes the rectangle drawn by the user to intersect with the existing selection areas.
+For an explanation on the intersect-algorithm, see the overall documentation of SNARE.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>start</strong> &#8211; Start point of the rectangle, already sorted to be the smaller number.</li>
+<li><strong>end</strong> &#8211; End point of the rectangle, already sorted to be the bigger number</li>
+<li><strong>type</strong> &#8211; &#8220;Add&#8221; or &#8220;Remove&#8221; from existing selection areas.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans up all selection areas in the objects list as well as the painted objects on the scene.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.getSelectionPoints">
+<code class="descname">getSelectionPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.getSelectionPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A tuple of two elements: start and end points of selection areas and lock-state of the selection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.redrawSelection">
+<code class="descname">redrawSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.redrawSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>After the points list has been conditioned by addSelection to be meaningful an alternate series of start and end
+points, the points can be put together to form the selection areas/rectangles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_enableSelection">
+<code class="descname">slo_enableSelection</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_enableSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control Slot. Trigger transition from &#8220;Finish&#8221; to &#8220;Idle&#8221; or &#8220;Idle&#8221; to &#8220;Finish&#8221;. This transition enables the user
+to block the selection from unwanted changes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; Set blocked or not.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_endSelection">
+<code class="descname">slo_endSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_endSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control Slot. Triggers transition from &#8220;Move&#8221; to &#8220;End&#8221; or &#8220;Start&#8221; to &#8220;Idle&#8221; if no mouse movement happened since
+the button was pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt-type from which to get the mouse position on the scene.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_moveSelection">
+<code class="descname">slo_moveSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_moveSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control Slot. Trigger transition from &#8220;Move&#8221; to &#8220;Move&#8221; or &#8220;Start&#8221; to &#8220;Move&#8221;.
+This models the dragging of the rectangle size.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all selection rectangels and redraws them after setting the new zoom-level.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; The new zoom-level</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_setSelection">
+<code class="descname">slo_setSelection</code><span class="sig-paren">(</span><em>selectionName</em>, <em>analysisType</em>, <em>selection</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_setSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the current selection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>selectionName</strong> &#8211; Name of the new selection. Not relevant here. See TrackButtons for other end of this command chain</li>
+<li><strong>analysisType</strong> &#8211; Type of analysis of the new selection. Not relevant here.</li>
+<li><strong>selection</strong> &#8211; Start and end points of selection areas of new selection</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.slo_startSelection">
+<code class="descname">slo_startSelection</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.slo_startSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control Slot. Triggers transition from &#8220;Idle&#8221; to &#8220;Start&#8221;. Determines the selection type (Add to or subtract from
+selection) by the mouse button pressed and also send the position where the user pressed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt-type from which to get the pressed mouse button and mouse position on the</td>
+</tr>
+</tbody>
+</table>
+<p>scene.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackSelection.TrackSelection.updateSelection">
+<code class="descname">updateSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackSelection.TrackSelection.updateSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans up all selection areas in the objects list as well as the painted objects on the scene. Subsequently
+triggers a redraw.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackTimeline">
+<span id="editorui-tracktimeline-module"></span><h2>EditorUI.TrackTimeline module<a class="headerlink" href="#module-EditorUI.TrackTimeline" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackTimeline.TrackTimeline">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackTimeline.</code><code class="descname">TrackTimeline</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em>, <em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackTimeline.TrackTimeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackTimeline adds a equidistant vertical lines to the waveform view and appends time strings to them. This allows
+for an easier navigation through the audio data. It needs to be stacked on top of a TrackView object to have the
+extended interface containing a scene. The drawing process works in a similar way to TrackWaveform and
+TrackTimeline.</p>
+<dl class="method">
+<dt id="EditorUI.TrackTimeline.TrackTimeline.formatTag">
+<code class="descname">formatTag</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackTimeline.TrackTimeline.formatTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the time for the requested position and formats it according to a set of rules about units and
+rounding.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; Position to calculate time at</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a formatted string containing the time e.g. &#8220;1:20 + 20ms&#8221;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackTimeline.TrackTimeline.paintBlock">
+<code class="descname">paintBlock</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackTimeline.TrackTimeline.paintBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws 10 lines per block and then appends a text on the bottom of each line to display the time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> &#8211; Number of block to paint.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackTimeline.TrackTimeline.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackTimeline.TrackTimeline.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>A zoom-event will reset the object and trigger a full repaint.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; New zoom-factor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackTimeline.TrackTimeline.slo_update">
+<code class="descname">slo_update</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackTimeline.TrackTimeline.slo_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class treats the painting area as divided into blocks. From the given position the next three blocks in each
+direction are calculated. Then if a block has not been already painted, it will be painted. This way only the
+visible portion of the scene has to be painted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; position in pixels around which to paint blocks.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackUI">
+<span id="editorui-trackui-module"></span><h2>EditorUI.TrackUI module<a class="headerlink" href="#module-EditorUI.TrackUI" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackUI.TrackUI">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackUI.</code><code class="descname">TrackUI</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>The TrackUI forms the bottom layer of one channel strip user interface element. It combines the TrackButtons and
+the waveform viewer (TrackWaveform) to one row with a QHBoxLayout. Apart from its layout functionality it
+relays the interface to its child objects.</p>
+<dl class="method">
+<dt id="EditorUI.TrackUI.TrackUI.enableDrag">
+<code class="descname">enableDrag</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI.enableDrag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackView</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; see TrackView</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackUI.TrackUI.enableScrollbar">
+<code class="descname">enableScrollbar</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI.enableScrollbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackView</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; see TrackView</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackUI.TrackUI.getSelectionPoints">
+<code class="descname">getSelectionPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI.getSelectionPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackView</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackUI.TrackUI.setCursor">
+<code class="descname">setCursor</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI.setCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackView</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; see TrackView</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackUI.TrackUI.setView">
+<code class="descname">setView</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackUI.TrackUI.setView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackView</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QRectF</strong> &#8211; see TrackView</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackView">
+<span id="editorui-trackview-module"></span><h2>EditorUI.TrackView module<a class="headerlink" href="#module-EditorUI.TrackView" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackView.TrackScene">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackView.</code><code class="descname">TrackScene</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackScene" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsScene</span></code></p>
+<p>TrackScene is a helper class. A QGraphicsScene object is necessary to give classes like TrackWaveform something to
+paint on. Ideally one could describe a class that inherits from TrackAbstract to keep the automated signal lines and
+from QGraphicsScene to have the paint functionality, but the Qt framework does not support multiple inheritance.
+Therefore TrackScene inherits from QGraphicsScene and the missing functionality is added manually.</p>
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackScene.mouseDoubleClickEvent">
+<code class="descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackScene.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QGraphicsSceneMouseEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; MouseEvent to relay</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackScene.mouseMoveEvent">
+<code class="descname">mouseMoveEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackScene.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QGraphicsSceneMouseEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; MouseEvent to relay</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackScene.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackScene.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QGraphicsSceneMouseEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; MouseEvent to relay</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackScene.mouseReleaseEvent">
+<code class="descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackScene.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QGraphicsSceneMouseEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; MouseEvent to relay</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EditorUI.TrackView.TrackView">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackView.</code><code class="descname">TrackView</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackView provides the user interface elements necessary to display the waveform, allow the user to make selections,
+place a cursor etc.</p>
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.enableDrag">
+<code class="descname">enableDrag</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.enableDrag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turning on and off the manual dragging mode of the view widget, which is one way to navigate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; True means manual dragging is enabled</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.enableScrollbar">
+<code class="descname">enableScrollbar</code><span class="sig-paren">(</span><em>bool</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.enableScrollbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scrollbar of the view widget can be turned on or off. It is only necessary to display the scrollbar of the
+bottom view widget if all tracks are synchronized.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bool</strong> &#8211; True means the scrollbar is visible</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.getSelectionPoints">
+<code class="descname">getSelectionPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.getSelectionPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackSelection</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">see TrackSelection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.setCursor">
+<code class="descname">setCursor</code><span class="sig-paren">(</span><em>smp</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.setCursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay to TrackCursor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; see TrackCursor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Slightly extends the base class&#8217; slo_redraw. Child classes will draw their content scaled when the slo_redraw</dt>
+<dd>has been triggered, but before thar happens, the scene has to be emptied.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; New zoom-level</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.slo_setView">
+<code class="descname">slo_setView</code><span class="sig-paren">(</span><em>QRectF</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.slo_setView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the specified portion of the scene in the view widget. Then let the base class handle further treatment
+of the signal (avoid breaking the chain of command)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QRectF</strong> &#8211; Position/rectangle to display</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.slo_update">
+<code class="descname">slo_update</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.slo_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>TrackManager triggers slo_update without a meaningful position. This method extracts a meaningful posiiton from
+the currently displayed portion of the scene and leaves it to the base class to relay the signal to all child
+classes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; Not relevant here.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.viewChanged">
+<code class="descname">viewChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.viewChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for signal triggered by the view widget. The signal should only be relayed to the parent if this is the
+active track. The dimensions of the currently by the view widget displayed portion of the scene is extracted
+and sent with the signal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackView.viewChangedByScrollbar">
+<code class="descname">viewChangedByScrollbar</code><span class="sig-paren">(</span><em>int</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackView.viewChangedByScrollbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for signal triggered by the view widget. The dimensions of the currently by the view widget displayed
+portion of the scene is extracted and sent with the signal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>int</strong> &#8211; Not elefant.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EditorUI.TrackView.TrackViewWidget">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackView.</code><code class="descname">TrackViewWidget</code><span class="sig-paren">(</span><em>scene</em>, <em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackViewWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsView</span></code></p>
+<p>TrackViewWidget is a helper class. A QGraphicsView object is necessary to display a QGraphicsScene. Ideally one
+could describe a class that inherits from TrackAbstract to keep the automated signal lines and from
+QGraphicsView to have the display functionality, but the Qt framework does not support multiple inheritance.
+Therefore TrackViewWidget inherits from QGraphicsView and the missing functionality is added manually.</p>
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackViewWidget.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackViewWidget.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QKeyEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; KeyEvent to relay :</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackView.TrackViewWidget.keyReleaseEvent">
+<code class="descname">keyReleaseEvent</code><span class="sig-paren">(</span><em>QKeyEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackView.TrackViewWidget.keyReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override method to grab and relay QKeyEvent to parent object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QKeyEvent</strong> &#8211; KeyEvent to relay :</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI.TrackWaveform">
+<span id="editorui-trackwaveform-module"></span><h2>EditorUI.TrackWaveform module<a class="headerlink" href="#module-EditorUI.TrackWaveform" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EditorUI.TrackWaveform.TrackWaveform">
+<em class="property">class </em><code class="descclassname">EditorUI.TrackWaveform.</code><code class="descname">TrackWaveform</code><span class="sig-paren">(</span><em>name</em>, <em>state</em>, <em>selections</em>, <em>analysisTypes</em>, <em>marks</em>, <em>cursorposition</em>, <em>height</em>, <em>width</em>, <em>smptopix</em>, <em>zoom</em>, <em>parent</em>, <em>scene</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackWaveform.TrackWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
+<p>TrackWaveform takes the currently displayed position of the scene and the zoom-level and requests the corresponding
+waveforms for the area surrounding this position. The creation of the waveform-points list is handled in the backend
+(see WaveformBuffer and WaveformThread) and the results are sent to TrackWaveform through a slot. Requesting and
+receiving waveform-points list is therefore independent or asynchronous. There are several zoom levels for which new
+waveforms will be requested. In between these zoom levels the pixmaps will be stretched to fit instead of a new
+render. Only the currently displayer pixmaps are stored in this object, but all rendered points lists are stored in the
+backend (WaveformBuffer).
+For a detailed overview of the waveform rendering and display, see the overall documentation of SNARE.</p>
+<dl class="method">
+<dt id="EditorUI.TrackWaveform.TrackWaveform.getClosestWaveformZoomLevel">
+<code class="descname">getClosestWaveformZoomLevel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackWaveform.TrackWaveform.getClosestWaveformZoomLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the available zoom-levels for pixmaps and returns the one closest to the current actual zoom level.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">closest available zoom level</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackWaveform.TrackWaveform.slo_addWaveform">
+<code class="descname">slo_addWaveform</code><span class="sig-paren">(</span><em>waveform</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackWaveform.TrackWaveform.slo_addWaveform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requested waveforms return after rendering in the backend by means of this slot. The points list itself and all
+information needed to place the pixmap on the right spot with the right size is part of the Waveform-object.
+E.g. if a waveform took too long to render (because the user has already set a new zoom level again) it will
+simply be filtered here and not used.
+The pixmap is either rendered for exactly the requested zoom level or it will be stretched to some extent.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>waveform</strong> &#8211; A Waveform-object containing a pixmap to place on the scene.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackWaveform.TrackWaveform.slo_redraw">
+<code class="descname">slo_redraw</code><span class="sig-paren">(</span><em>factor=1</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackWaveform.TrackWaveform.slo_redraw" title="Permalink to this definition">¶</a></dt>
+<dd><p>A zoom-event will reset the object and trigger a full repaint.
+There is a distinction between the width of a pixmap before scaling, which represents the zoom-levels for which
+a new pixmap will be rendered and the width of a pixmap after scaling, which, if it differs from the width
+before scaling, accounts for a stretching of the pixmap.
+The zoom levels for which new pixmaps will be rendered are defined in this method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>factor</strong> &#8211; New zoom-factor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackWaveform.TrackWaveform.slo_update">
+<code class="descname">slo_update</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackWaveform.TrackWaveform.slo_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the requests for waveforms to the backend.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> &#8211; Position around which to render</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-EditorUI">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-EditorUI" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Philipp Merz und Malte Merdes.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.1a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
