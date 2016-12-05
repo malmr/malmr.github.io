@@ -1,0 +1,20 @@
+Overview
+**************************
+
+
+What is SNARE?
+=========================
+
+SNARE is a modular audio analyze tool focused on handling long multichannel recordings. It includes a standardized octave band analysis, sound pressure level over time and histogram (sound pressure level occurrence distribution) with the option to calibrate analysis and generate reports. Analysis can be extended by a plugin system.
+It is implemented in Python, open source and cross-platform.
+SNARE can use 16bit or 24bit with 44.1kHz, 48kHz or 96kHz WAV files with an arbitrary number of channels as data source or directly record multiple channels from any audio interface. The tool supports a calibration source with 94dB at 1kHz otherwise it can perform quantitative analysis.
+
+The first part of this thesis features a short tutorial on how-to use SNARE, a detailed manual describing all aspects of the tool, as well as a guide to extending the tool's functionality, while the second part covers the development and technical documentation.
+
+This is something I want to say that is not in the docstring.
+
+User Manual
+=============================
+
+This is something I want to say that is not in the docstring.
+

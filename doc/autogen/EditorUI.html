@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EditorUI package &mdash; SNARE 0.1.1a documentation</title>
+  <title>EditorUI package &mdash; SNARE Documentation 0.3 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="SNARE 0.1.1a documentation" href="../index.html"/> 
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="v0.3" href="modules.html"/>
+        <link rel="next" title="Reports package" href="Reports.html"/>
+        <link rel="prev" title="EditorBackend package" href="EditorBackend.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> SNARE
+            <a href="../index.html" class="icon icon-home"> SNARE Documentation
           
 
           
@@ -58,7 +61,7 @@
             
             
               <div class="version">
-                0.1
+                0.3
               </div>
             
           
@@ -79,27 +82,38 @@
           
             
             
-                <!-- Local TOC -->
-                <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">EditorUI package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackAbstract">EditorUI.TrackAbstract module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackButtons">EditorUI.TrackButtons module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackCursor">EditorUI.TrackCursor module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackData">EditorUI.TrackData module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackManager">EditorUI.TrackManager module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackMark">EditorUI.TrackMark module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackOverview">EditorUI.TrackOverview module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackSelection">EditorUI.TrackSelection module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackTimeline">EditorUI.TrackTimeline module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackUI">EditorUI.TrackUI module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackView">EditorUI.TrackView module</a></li>
-<li><a class="reference internal" href="#module-EditorUI.TrackWaveform">EditorUI.TrackWaveform module</a></li>
-<li><a class="reference internal" href="#module-EditorUI">Module contents</a></li>
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">v0.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Start.html">Start module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MainUI.html">MainUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeTools.html">AnalyzeTools package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorBackend.html">EditorBackend package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EditorUI package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackAbstract">EditorUI.TrackAbstract module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackButtons">EditorUI.TrackButtons module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackCursor">EditorUI.TrackCursor module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackData">EditorUI.TrackData module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackManager">EditorUI.TrackManager module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackMark">EditorUI.TrackMark module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackOverview">EditorUI.TrackOverview module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackSelection">EditorUI.TrackSelection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackTimeline">EditorUI.TrackTimeline module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackUI">EditorUI.TrackUI module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackView">EditorUI.TrackView module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI.TrackWaveform">EditorUI.TrackWaveform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorUI">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Reports.html">Reports package</a></li>
 </ul>
 </li>
 </ul>
-</div>
+
             
           
         </div>
@@ -111,7 +125,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">SNARE</a>
+        <a href="../index.html">SNARE Documentation</a>
       </nav>
 
 
@@ -127,6 +141,8 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">v0.3</a> &raquo;</li>
       
     <li>EditorUI package</li>
       <li class="wy-breadcrumbs-aside">
@@ -367,11 +383,10 @@ control the state machine of TrackSelection</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor position</td>
 </tr>
 </tbody>
 </table>
-<p>position</p>
 </dd></dl>
 
 <dl class="method">
@@ -480,11 +495,10 @@ control the state machine of TrackSelection</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor position</td>
 </tr>
 </tbody>
 </table>
-<p>position</p>
 </dd></dl>
 
 <dl class="method">
@@ -637,11 +651,10 @@ control the state machine of TrackSelection</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; A Qt-type containing at least the mouse button that was pressed and the cursor position</td>
 </tr>
 </tbody>
 </table>
-<p>position</p>
 </dd></dl>
 
 <dl class="method">
@@ -703,6 +716,11 @@ To function properly the files &#8220;EditorUI/Lock.png&#8221;, &#8220;Marker.pn
 <code class="descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.lock" title="Permalink to this definition">¶</a></dt>
 <dd><p>A toggle switch for the lock symbol</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="EditorUI.TrackButtons.TrackButtons.resource_path">
+<code class="descname">resource_path</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackButtons.TrackButtons.resource_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="EditorUI.TrackButtons.TrackButtons.selectionChange">
@@ -768,11 +786,10 @@ be stacked on top of a TrackView object to have the extended interface containin
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Requested cursor position in samples. Automatic conversion from samples to the actual position in</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>smp</strong> &#8211; Requested cursor position in samples. Automatic conversion from samples to the actual position in pixels on screen</td>
 </tr>
 </tbody>
 </table>
-<p>pixels on screen</p>
 </dd></dl>
 
 <dl class="method">
@@ -986,7 +1003,7 @@ area (in start/end-points)</p>
 <span id="editorui-trackmanager-module"></span><h2>EditorUI.TrackManager module<a class="headerlink" href="#module-EditorUI.TrackManager" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="EditorUI.TrackManager.TrackManager">
-<em class="property">class </em><code class="descclassname">EditorUI.TrackManager.</code><code class="descname">TrackManager</code><span class="sig-paren">(</span><em>analyses</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">EditorUI.TrackManager.</code><code class="descname">TrackManager</code><span class="sig-paren">(</span><em>analyses</em>, <em>blockSize</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorUI.TrackManager.TrackManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#EditorUI.TrackAbstract.TrackAbstract" title="EditorUI.TrackAbstract.TrackAbstract"><code class="xref py py-class docutils literal"><span class="pre">EditorUI.TrackAbstract.TrackAbstract</span></code></a></p>
 <p>The TrackManager provides the connection between the editor area of SNARE and the MainBackend. Also it defines the
 behaviour of the entire editor area. An editor element (TrackUI) does not contain any logic, it merely sends all
@@ -1727,11 +1744,10 @@ selection) by the mouse button pressed and also send the position where the user
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt-type from which to get the pressed mouse button and mouse position on the</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>QGraphicsSceneMouseEvent</strong> &#8211; Qt-type from which to get the pressed mouse button and mouse position on the scene.</td>
 </tr>
 </tbody>
 </table>
-<p>scene.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2226,12 +2242,21 @@ The zoom levels for which new pixmaps will be rendered are defined in this metho
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Reports.html" class="btn btn-neutral float-right" title="Reports package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="EditorBackend.html" class="btn btn-neutral" title="EditorBackend package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, Philipp Merz und Malte Merdes.
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
 
     </p>
   </div>
@@ -2253,7 +2278,7 @@ The zoom levels for which new pixmaps will be rendered are defined in this metho
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.1.1a',
+            VERSION:'0.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

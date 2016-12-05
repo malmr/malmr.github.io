@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reports package &mdash; SNARE Documentation 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="v0.3" href="modules.html"/>
+        <link rel="prev" title="EditorUI package" href="EditorUI.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">v0.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Start.html">Start module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MainUI.html">MainUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeTools.html">AnalyzeTools package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorBackend.html">EditorBackend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorUI.html">EditorUI package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reports package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Reports.ReportHtml">Reports.ReportHtml module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Reports.ReportManager">Reports.ReportManager module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Reports.ReportObject">Reports.ReportObject module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Reports.ReportPdf">Reports.ReportPdf module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Reports">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">v0.3</a> &raquo;</li>
+      
+    <li>Reports package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/Reports.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reports-package">
+<h1>Reports package<a class="headerlink" href="#reports-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Reports.ReportHtml">
+<span id="reports-reporthtml-module"></span><h2>Reports.ReportHtml module<a class="headerlink" href="#module-Reports.ReportHtml" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Reports.ReportHtml.ReportHtml">
+<em class="property">class </em><code class="descclassname">Reports.ReportHtml.</code><code class="descname">ReportHtml</code><span class="sig-paren">(</span><em>snare</em>, <em>fileName</em>, <em>imgDir</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportHtml.ReportHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Reports.ReportObject.ReportObject" title="Reports.ReportObject.ReportObject"><code class="xref py py-class docutils literal"><span class="pre">Reports.ReportObject.ReportObject</span></code></a></p>
+<p>The PDF report object handles the generation of the analyses images,</p>
+<dl class="method">
+<dt id="Reports.ReportHtml.ReportHtml.appendAnalyze">
+<code class="descname">appendAnalyze</code><span class="sig-paren">(</span><em>widget</em>, <em>channel</em>, <em>sel</em>, <em>imgDir</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportHtml.ReportHtml.appendAnalyze" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportHtml.ReportHtml.exportHtml">
+<code class="descname">exportHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportHtml.ReportHtml.exportHtml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Reports.ReportManager">
+<span id="reports-reportmanager-module"></span><h2>Reports.ReportManager module<a class="headerlink" href="#module-Reports.ReportManager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Reports.ReportManager.ReportManager">
+<em class="property">class </em><code class="descclassname">Reports.ReportManager.</code><code class="descname">ReportManager</code><span class="sig-paren">(</span><em>snare</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.createReport">
+<code class="descname">createReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.createReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a filedialog to select the output file and start the generation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.deselectAll">
+<code class="descname">deselectAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.deselectAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emits signal triggered by pressing in report menu &#8216;Deselect all&#8217;.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Reports.ReportManager.ReportManager.deselectAllReports">
+<code class="descname">deselectAllReports</code><a class="headerlink" href="#Reports.ReportManager.ReportManager.deselectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.generateHtml">
+<code class="descname">generateHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.generateHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the generation and export of the selected analyses to HTML.
+Iterate trough all selected analyses (in first layer through all channels and second layer through all activated
+selections = analyses) and generate the image in a subfolder defined with &#8216;imgDirRel&#8217;. After each generation
+an analyse html block is generated and appended to an page string.
+In exportHtml the html blocks are summed up and exported in one .html file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.generatePdf">
+<code class="descname">generatePdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.generatePdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the generation and export of the selected analyses to PDF.
+Iterate trough all selected analyses (in first layer through all channels and second layer through all activated
+selections = analyses) and generate the image in a predefined tmp dir (self.dirtmp).
+After generateImage an html string is appended to a page depending list.
+After completly exported the PDF, the tmp dir is cleared.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.generatePng">
+<code class="descname">generatePng</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.generatePng" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the generation and export of the selected analyses to PNG.Depending if one analyse is selected or
+several, it exports the file either to the user input filename or to dynamically generated filenames.
+Iterating trough all selected analyses (in first layer through all channels and second layer through all
+activated selections = analyses) and generate the image in a subfolder defined with &#8216;imgDirRel&#8217;. After each
+generation an analyse html block is generated and appended to an page string.
+In exportHtml the html blocks are summed up and exported in one .html file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.numOfReports">
+<code class="descname">numOfReports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.numOfReports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the amoungh of activated reports.
+:return: Len of activated reports.
+:rtype: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.selectAll">
+<code class="descname">selectAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.selectAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emits signal triggered by pressing in report menu &#8216;Select all&#8217;.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Reports.ReportManager.ReportManager.selectAllReports">
+<code class="descname">selectAllReports</code><a class="headerlink" href="#Reports.ReportManager.ReportManager.selectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportManager.ReportManager.state">
+<code class="descname">state</code><span class="sig-paren">(</span><em>state</em>, <em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportManager.ReportManager.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toogle the state of the activated analyse widgets in a 2D list.
+:param state: Bool wheather report is activated or deactivated for widget.
+:type state: bool
+:param channel: channel object
+:type channel: Obj
+:param selNo: Sel No
+:type selNo: str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Reports.ReportObject">
+<span id="reports-reportobject-module"></span><h2>Reports.ReportObject module<a class="headerlink" href="#module-Reports.ReportObject" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Reports.ReportObject.ReportObject">
+<em class="property">class </em><code class="descclassname">Reports.ReportObject.</code><code class="descname">ReportObject</code><span class="sig-paren">(</span><em>snare</em>, <em>fileName</em>, <em>imgDir</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>ReportObject is the base class for the PDF and HTML export objects.
+It handles the generation of the analyses images and the html code assembling (like header, footer, analyse
+widget block).</p>
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.appendAnalyze">
+<code class="descname">appendAnalyze</code><span class="sig-paren">(</span><em>widget</em>, <em>channel</em>, <em>sel</em>, <em>imgDir=False</em>, <em>width=550</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.appendAnalyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appending the analyse to a html page string.
+self.pages stores the html page strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>widget</strong> (<em>QWidget</em>) &#8211; AnalyzeWidget object</li>
+<li><strong>channel</strong> (<em>Obj</em>) &#8211; channel object</li>
+<li><strong>sel</strong> (<em>str</em>) &#8211; Sel No</li>
+<li><strong>imgDir</strong> (<em>str</em>) &#8211; Optional parameter to set the image path to a non absolute path (in case of HTML export)</li>
+<li><strong>width</strong> (<em>int</em>) &#8211; Optional parameter to set the analyse image width in the html code.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.appendFooter">
+<code class="descname">appendFooter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.appendFooter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append the widget header to the current html page.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.appendHeader">
+<code class="descname">appendHeader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.appendHeader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the page header in a new html page string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.appendTitle">
+<code class="descname">appendTitle</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.appendTitle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append the widget title to the html page.
+:param channel: channel object
+:type channel: Obj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.deleteImages">
+<code class="descname">deleteImages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.deleteImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all generated images.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportObject.ReportObject.generateImage">
+<code class="descname">generateImage</code><span class="sig-paren">(</span><em>widget</em>, <em>channelObj</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportObject.ReportObject.generateImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate an png file from AnalyseWidget.
+Image path is composed of self.imgDir and an id string.
+:param widget: AnalyzeWidget object
+:type widget: QWidget
+:param channelObj: channel object
+:type channelObj: Obj
+:param sel: Sel No
+:type sel: str</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Reports.ReportPdf">
+<span id="reports-reportpdf-module"></span><h2>Reports.ReportPdf module<a class="headerlink" href="#module-Reports.ReportPdf" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Reports.ReportPdf.ReportPdf">
+<em class="property">class </em><code class="descclassname">Reports.ReportPdf.</code><code class="descname">ReportPdf</code><span class="sig-paren">(</span><em>snare</em>, <em>fileName</em>, <em>imgDir</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#Reports.ReportObject.ReportObject" title="Reports.ReportObject.ReportObject"><code class="xref py py-class docutils literal"><span class="pre">Reports.ReportObject.ReportObject</span></code></a></p>
+<p>The PDF report object handles the generation of the analyses images and the PDF painting.</p>
+<dl class="method">
+<dt id="Reports.ReportPdf.ReportPdf.PaintPage">
+<code class="descname">PaintPage</code><span class="sig-paren">(</span><em>page</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf.PaintPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paint given page to PDF print device.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportPdf.ReportPdf.appendAnalyze">
+<code class="descname">appendAnalyze</code><span class="sig-paren">(</span><em>widget</em>, <em>channel</em>, <em>sel</em><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf.appendAnalyze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify appendAnalyze method from baseclass to create new pdf pages every 3rd widget per channel.
+:param widget: AnalyzeWidget object
+:type widget: QWidget
+:param channel: channel object
+:type channel: Obj
+:param sel: Sel No
+:type sel: str</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportPdf.ReportPdf.finishPaint">
+<code class="descname">finishPaint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf.finishPaint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the QPrinter painting.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportPdf.ReportPdf.newPage">
+<code class="descname">newPage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf.newPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print new page.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Reports.ReportPdf.ReportPdf.startPaint">
+<code class="descname">startPaint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Reports.ReportPdf.ReportPdf.startPaint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the QPrinter device and starts the painting of the PDF file.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Reports">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Reports" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="EditorUI.html" class="btn btn-neutral" title="EditorUI package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

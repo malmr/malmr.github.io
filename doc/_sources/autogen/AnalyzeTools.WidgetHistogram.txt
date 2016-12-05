@@ -1,0 +1,38 @@
+AnalyzeTools.WidgetHistogram package
+====================================
+
+Submodules
+----------
+
+AnalyzeTools.WidgetHistogram.CalculationHistogram module
+--------------------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetHistogram.CalculationHistogram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetHistogram.PlotHistogram module
+-------------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetHistogram.PlotHistogram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetHistogram.WidgetHistogram module
+---------------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetHistogram.WidgetHistogram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: AnalyzeTools.WidgetHistogram
+    :members:
+    :undoc-members:
+    :show-inheritance:

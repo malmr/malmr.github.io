@@ -1,0 +1,46 @@
+Reports package
+===============
+
+Submodules
+----------
+
+Reports.ReportHtml module
+-------------------------
+
+.. automodule:: Reports.ReportHtml
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Reports.ReportManager module
+----------------------------
+
+.. automodule:: Reports.ReportManager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Reports.ReportObject module
+---------------------------
+
+.. automodule:: Reports.ReportObject
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Reports.ReportPdf module
+------------------------
+
+.. automodule:: Reports.ReportPdf
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: Reports
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,62 @@
+MainUI package
+==============
+
+Submodules
+----------
+
+MainUI.InputSelectorDialog module
+---------------------------------
+
+.. automodule:: MainUI.InputSelectorDialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+MainUI.MainWindow module
+------------------------
+
+.. automodule:: MainUI.MainWindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+MainUI.Menubar module
+---------------------
+
+.. automodule:: MainUI.Menubar
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+MainUI.StartDialog module
+-------------------------
+
+.. automodule:: MainUI.StartDialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+MainUI.Statusbar module
+-----------------------
+
+.. automodule:: MainUI.Statusbar
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+MainUI.SubWindow module
+-----------------------
+
+.. automodule:: MainUI.SubWindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: MainUI
+    :members:
+    :undoc-members:
+    :show-inheritance:

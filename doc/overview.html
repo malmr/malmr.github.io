@@ -1,0 +1,1308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; SNARE Documentation 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="thesis.css"> 
+
+
+  
+
+  
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="index.html"/>
+        <link rel="next" title="v0.3" href="autogen/modules.html"/>
+        <link rel="prev" title="Welcome to SNARE’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SNARE Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-snare">What is SNARE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-manual">User Manual</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autogen/modules.html">v0.3</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">SNARE Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/overview.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-snare">
+<h2>What is SNARE?<a class="headerlink" href="#what-is-snare" title="Permalink to this headline">¶</a></h2>
+<p>SNARE is a modular audio analyze tool focused on handling long multichannel recordings. It includes a standardized octave band analysis, sound pressure level over time and histogram (sound pressure level occurrence distribution) with the option to calibrate analysis and generate reports. Analysis can be extended by a plugin system.
+It is implemented in Python, open source and cross-platform.
+SNARE can use 16bit or 24bit with 44.1kHz, 48kHz or 96kHz WAV files with an arbitrary number of channels as data source or directly record multiple channels from any audio interface. The tool supports a calibration source with 94dB at 1kHz otherwise it can perform quantitative analysis.</p>
+<p>The first part of this thesis features a short tutorial on how-to use SNARE, a detailed manual describing all aspects of the tool, as well as a guide to extending the tool&#8217;s functionality, while the second part covers the development and technical documentation.</p>
+<p>This is something I want to say that is not in the docstring.</p>
+</div>
+<div class="section" id="user-manual">
+<h2>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h2>
+<p>
+                                                       
+<!--l. 139-->  <a 
+ id="chapter*.1"></a>
+ &#x00A0;<span class="sectionToc" >2.1&#x00A0;&#x00A0;<a 
+href="#x1-80002.1" id="QQ2-1-14">Quick Guide</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.1&#x00A0;&#x00A0;<a 
+href="#x1-90002.1.1" id="QQ2-1-15">Step 1: Select input</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.2&#x00A0;&#x00A0;<a 
+href="#x1-100002.1.2" id="QQ2-1-17">Step 2: Calibrate (optional)</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.3&#x00A0;&#x00A0;<a 
+href="#x1-110002.1.3" id="QQ2-1-19">Step 3: Analyse</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.4&#x00A0;&#x00A0;<a 
+href="#x1-120002.1.4" id="QQ2-1-20">Step 4: Export</a></span>
+<br />  &#x00A0;<span class="sectionToc" >2.2&#x00A0;&#x00A0;<a 
+href="#x1-130002.2" id="QQ2-1-21">User Manual</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.1&#x00A0;&#x00A0;<a 
+href="#x1-140002.2.1" id="QQ2-1-22">Data flow chart and layout</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.2&#x00A0;&#x00A0;<a 
+href="#x1-150002.2.2" id="QQ2-1-25">Open file(s)</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.3&#x00A0;&#x00A0;<a 
+href="#x1-160002.2.3" id="QQ2-1-26">Recording</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.4&#x00A0;&#x00A0;<a 
+href="#x1-170002.2.4" id="QQ2-1-27">Channel functions (zoom, navigation, marker, play)</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.5&#x00A0;&#x00A0;<a 
+href="#x1-180002.2.5" id="QQ2-1-28">Selection</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.6&#x00A0;&#x00A0;<a 
+href="#x1-190002.2.6" id="QQ2-1-29">Calibration</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.7&#x00A0;&#x00A0;<a 
+href="#x1-200002.2.7" id="QQ2-1-30">Analyze</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.8&#x00A0;&#x00A0;<a 
+href="#x1-250002.2.8" id="QQ2-1-35">Generate Report</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.9&#x00A0;&#x00A0;<a 
+href="#x1-260002.2.9" id="QQ2-1-36">Views</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.10&#x00A0;&#x00A0;<a 
+href="#x1-270002.2.10" id="QQ2-1-37">Track Scrollbar</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.11&#x00A0;&#x00A0;<a 
+href="#x1-280002.2.11" id="QQ2-1-38">Status Bar</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.2.12&#x00A0;&#x00A0;<a 
+href="#x1-290002.2.12" id="QQ2-1-39">Menu Bar</a></span>
+<br />  &#x00A0;<span class="sectionToc" >2.3&#x00A0;&#x00A0;<a 
+href="#x1-300002.3" id="QQ2-1-40">Create own Analyze Widgets</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.3.1&#x00A0;&#x00A0;<a 
+href="#x1-310002.3.1" id="QQ2-1-41">Info.txt</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.3.2&#x00A0;&#x00A0;<a 
+href="#x1-320002.3.2" id="QQ2-1-43">Analyze Control Panel adaptation</a></span>
+<br />  &#x00A0;<span class="sectionToc" >2.4&#x00A0;&#x00A0;<a 
+href="#x1-330002.4" id="QQ2-1-44">Editor Adjustment Tutorial</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.4.1&#x00A0;&#x00A0;<a 
+href="#x1-340002.4.1" id="QQ2-1-45">Advantages of Qt&#8217;s Signal/Slot</a></span>
+<br />  &#x00A0;&#x00A0;<span class="subsectionToc" >2.4.2&#x00A0;&#x00A0;<a 
+href="#x1-350002.4.2" id="QQ2-1-46">Code Example</a></span>
+<br /> 
+                                                                                       
+                                                                                       
+<!--l. 143--><p class="indent" >
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                 
+
+<!--l. 1--><p class="noindent" >This chapter focuses on SNARE&#8217;s standard operations performed by end-users.<br 
+class="newline" />The Quick Guide in <a 
+href="#x1-80002.1">2.1<!--tex4ht:ref: sec:manual:quickguide --></a> covers the most common workflows whereas the User Manual in <a 
+href="#x1-130002.2">2.2<!--tex4ht:ref: sec:manual:functions --></a> comprises
+the whole scope of all functions and its detailed explanations.
+  <h3 class="sectionHead"><span class="titlemark">2.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-80002.1"></a>Quick Guide</h3>
+<!--l. 6--><p class="noindent" >A standard workflow of the program usage can be broken down in the following four steps, as shown in
+figure <a 
+href="#x1-9002r1">2.1<!--tex4ht:ref: fig:2manual:quick_quide:workflow_reduced --></a>.
+<!--l. 9--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-90002.1.1"></a>Step 1: Select input</h4>
+<!--l. 10--><p class="noindent" >When starting the program a start dialog pops up. To open WAV files just drag
+and drop them into the window or open them by clicking the &#8221;Open WAV&#8221;
+button.<span class="footnote-mark"><a 
+href="thesis4.html#fn3x3"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-9001f3"></a> 
+Afterwards the main program with the selected audio file(s) appears. <br 
+class="newline" /><br 
+class="newline" />If you want to record audio click the &#8221;Record...&#8221; button and a drop-down list with your audio
+interface setup shows up. Select the desired channels to record and hit &#8221;Confirm&#8221;. The
+program is now ready to record. Start the recording with Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording <span 
+class="msam-10x-x-109">&#x25B8; </span>Record (or
+<span 
+class="cmbx-10x-x-109">ctrl+R</span>). When finished stop the recording with Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording <span 
+class="msam-10x-x-109">&#x25B8; </span>Stop (or <span 
+class="cmbx-10x-x-109">ctrl+S</span>).
+<hr class="figure"><div class="figure" 
+>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-9002r1"></a>
+                                                                                       
+                                                                                       
+<!--l. 12--><p class="noindent" ><img 
+src="thesis2x.png" alt="PIC" class="graphics" width="1000px" ><!--tex4ht:graphics  
+name="thesis2x.png" src="2manual/workflow_reduced.eps"  
+-->
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;2.1: </td><td  
+class="content">Standard usage workflow</td></tr></table></div><!--tex4ht:label?: x1-9002r1 -->
+                                                                                       
+                                                                                       
+<!--l. 12--><p class="indent" >  </div><hr class="endfigure">
+  <h4 class="subsectionHead"><span class="titlemark">2.1.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-100002.1.2"></a>Step 2: Calibrate (optional)</h4>
+<!--l. 15--><p class="noindent" >For measurement purposes and to be able to plot the analyses with a dBSPL
+scale<span class="footnote-mark"><a 
+href="thesis5.html#fn4x3"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-10001f4"></a> ,
+a calibration of the file is necessary. Nevertheless the calibration workflow stage is optional
+and a qualitative analysis can be preformed without calibration, which results in a
+dBFS<span class="footnote-mark"><a 
+href="thesis6.html#fn5x3"><sup class="textsuperscript">5</sup></a></span><a 
+ id="x1-10002f5"></a> 
+scale. The calibration tone needs to be recorded in conformity with the standards with a 94dB 1kHz sound
+source.<span class="footnote-mark"><a 
+href="thesis7.html#fn6x3"><sup class="textsuperscript">6</sup></a></span><a 
+ id="x1-10003f6"></a> .<br 
+class="newline" /><br 
+class="newline" />To calibrate the channel change the drop-down list to &#8221;Calib.&#8221;. Then mark the largest possible time
+range containing the calibration signal by holding down the left mouse button and moving over the
+waveform. Deselect by holding down the right mouse button. Finally click the &#8221;Calibrate&#8221; button.
+<hr class="figure"><div class="figure" 
+>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-10006r2"></a>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-10004r1"></a>
+<!--l. 20--><p class="noindent" ><img 
+src="2manual/calibration_dropdown.png" alt="PIC"  
+>
+&#x00A0;
+<span 
+class="cmti-9">(a)</span> <span 
+class="cmr-9">Drop-down</span>
+   <span 
+class="cmr-9">list</span>
+   <span 
+class="cmr-9">of</span>
+   <span 
+class="cmr-9">selections.</span>&#x00A0;                                                                        <a 
+ id="x1-10005r2"></a><img 
+src="2manual/calibration_selection.png" alt="PIC"  
+>
+                                                                                   &#x00A0;
+                                                                                   <span 
+class="cmti-9">(b)</span> <span 
+class="cmr-9">Selection</span>
+                                                                                      <span 
+class="cmr-9">of</span>
+                                                                                      <span 
+class="cmr-9">the</span>
+                                                                                      <span 
+class="cmr-9">(calibration-)</span>
+                                                                                      <span 
+class="cmr-9">waveform</span>
+                                                                                      <span 
+class="cmr-9">with</span>
+                                                                                      <span 
+class="cmr-9">currently</span>
+                                                                                      <span 
+class="cmr-9">draging</span>
+                                                                                      <span 
+class="cmr-9">the</span>
+                                                                                      <span 
+class="cmr-9">deselection</span>
+                                                                                      <span 
+class="cmr-9">(red</span>
+                                                                                      <span 
+class="cmr-9">rectangle).</span>&#x00A0;
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;2.2: </td><td  
+class="content">Detailed explanation for calibration.</td></tr></table></div><!--tex4ht:label?: x1-10006r2 -->
+                                                                                       
+                                                                                       
+<!--l. 24--><p class="indent" >  </div><hr class="endfigure">
+  <h4 class="subsectionHead"><span class="titlemark">2.1.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-110002.1.3"></a>Step 3: Analyse</h4>
+<!--l. 27--><p class="noindent" >To select the region to be analyzed, click and hold the left mouse button and mark an area of the
+waveform (green rectangles). To refine your selection, click and hold the right mouse button to deselect
+(red rectangle when active, see figure <a 
+href="#x1-10005r2">2.2b<!--tex4ht:ref: 2manual:quick_quide:calibration:sel --></a>). Subsequently select the type (FFT, Histogram, SPL etc)
+from the drop-down list and start the analyse by hitting the &#8221;Analyse&#8221; button underneath. Your
+analyse (hereafter called analyze widget) appears now in the &#8221;Analyzer&#8221; window, whereas the &#8221;Editor&#8221;
+window still contains the waveforms and selections. By modifing the existing selection,
+your old analyze widget will be replaced. When you activate another selection (drop-down
+menu, figure <a 
+href="#x1-10004r1">2.2a<!--tex4ht:ref: 2manual:quick_quide:calibration:dropdown --></a>) the new analyze will be placed underneath the old one, which offers the
+possibility to compare different channels, time-regions or to store several analyse types of one
+region.
+<!--l. 29--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.1.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-120002.1.4"></a>Step 4: Export</h4>
+<!--l. 30--><p class="noindent" >When all analyse widget parameters (time weight, frequency weight etc.) are set as you want them
+to be exported, tick the &#8221;Report&#8221; checkbox on the right of every widget. A shortcut for
+(de-)selecting all widgets for export can be found under Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Report <span 
+class="msam-10x-x-109">&#x25B8; </span>Select all (or
+<span 
+class="cmbx-10x-x-109">ctrl+A</span>).<br 
+class="newline" />With Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Report <span 
+class="msam-10x-x-109">&#x25B8; </span>Export... (or <span 
+class="cmbx-10x-x-109">ctrl+E</span>) the export file save dialog opens up and let you specify
+where to save the report and which in format (PDF, PNG or HTML). <br 
+class="newline" /><br 
+class="newline" />For detailed information please follow section <a 
+href="#x1-250002.2.8">2.2.8<!--tex4ht:ref: sec:manual:usermanual:report --></a>.
+<!--l. 36--><p class="noindent" >
+  <h3 class="sectionHead"><span class="titlemark">2.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-130002.2"></a>User Manual</h3>
+<!--l. 37--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-140002.2.1"></a>Data flow chart and layout</h4>
+<!--l. 38--><p class="noindent" >Figure <a 
+href="#x1-14001r3">2.3<!--tex4ht:ref: fig:2manual:usermanual:snare_layout_overview --></a> provides an overview of the main layout areas of SNARE and their naming, which is in
+detail the menu bar, the editor window with an opened track and its track control panel as well as the
+track navigation, the analyzer window with the analyze control panel and the status bar (from top).
+Whereas the data flow chart in figure <a 
+href="#x1-14002r4">2.4<!--tex4ht:ref: fig:2manual:usermanual:functions_complete_overview --></a> covers a coherent view on all functionalities accessible by the
+end-user.
+<!--l. 40--><p class="indent" >  <hr class="figure"><div class="figure" 
+>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-14001r3"></a>
+                                                                                       
+                                                                                       
+
+<!--l. 40--><p class="noindent" ><img 
+src="snare_layout_overview.png" width="1000px" alt="PIC"  
+>
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;2.3: </td><td  
+class="content">Layout overview of SNARE with an audio sample loaded from the high voltage
+corona discharge measurement series. (Details on the measurement see section <a 
+href="#x1-50001.3">1.3<!--tex4ht:ref: sec:Experience --></a>.)</td></tr></table></div><!--tex4ht:label?: x1-14001r3 -->
+                                                                                       
+                                                                                       
+<!--l. 40--><p class="indent" >  </div><hr class="endfigure">
+<!--l. 42--><p class="indent" >  <div class="figure" 
+>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-14002r4"></a><a 
+ id="x1-3100014"></a><a 
+ id="x1-350009"></a>
+                                                                                       
+                                                                                       
+<!--l. 42--><p class="noindent" >                                                                   <img 
+src="functions_complete_overview.svg" width="1000px" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="thesis3x.png" src="2manual/functions_complete_overview.pdf"  
+-->
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;2.4: </td><td  
+class="content">Complete functional overview of SNARE</td></tr></table></div><!--tex4ht:label?: x1-14002r4 -->
+                                                                                       
+                                                                                       
+<!--l. 42--><p class="indent" >  </div><hr class="endfigure">
+  <h4 class="subsectionHead"><span class="titlemark">2.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-150002.2.2"></a>Open file(s)</h4>
+<!--l. 45--><p class="noindent" ><span 
+class="msam-10x-x-109">&#x25B8;</span><span 
+class="cmti-10x-x-109">ctrl + O </span>or drag &amp; drop into window.<br 
+class="newline" />Beginning from the left, the user can record or open existing audio file(s). All common
+RIFF WAVE files with 16bit or 24bit bit depth in 44.1kHz, 48kHz or 96kHz are readable.
+<br 
+class="newline" />When the file can&#8217;t be read, an error in the console is returned with detailed description, e.g. when the
+file is corrupt. In the main window the function is accessible through the menu or the above mentioned
+shortcut.
+<!--l. 49--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-160002.2.3"></a>Recording</h4>
+<!--l. 50--><p class="noindent" ><span 
+class="cmbx-10x-x-109">Select Input </span><span 
+class="msam-10x-x-109">&#x25B8;</span><span 
+class="cmti-10x-x-109">ctrl + I</span><br 
+class="newline" />First the channels for recording from your build in or external audio interface need to be selected. This
+can be done via start dialog&#8217;s &#8221;Recording...&#8221; button or in the main window through Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording
+<span 
+class="msam-10x-x-109">&#x25B8; </span>Select Input... or the mentioned shortcut. The selected channels will be added in the Editor and are
+ready for record.<br 
+class="newline" /><br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Start </span><span 
+class="msam-10x-x-109">&#x25B8;</span><span 
+class="cmti-10x-x-109">ctrl + R</span><br 
+class="newline" />To start recording go to Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording <span 
+class="msam-10x-x-109">&#x25B8; </span>Record or use the given shortcut. Due to buffer handling
+the waveform will be updated every 10 seconds. The files are saved in the program main folder with
+format: <span 
+class="cmti-10x-x-109">DD.MM.YYYY-hh.mm.ss</span><span 
+class="cmti-10x-x-109">_</span><span 
+class="cmti-10x-x-109">_InterfaceName</span><span 
+class="cmti-10x-x-109">_[ChannelNo].wav</span>. A time counter in the task bar
+shows information depending the record. <br 
+class="newline" /><br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Pause </span><span 
+class="msam-10x-x-109">&#x25B8;</span><span 
+class="cmti-10x-x-109">ctrl + P</span><br 
+class="newline" />Pause the recording with Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording <span 
+class="msam-10x-x-109">&#x25B8; </span>Pause or the given shortcut. After the pause use <span 
+class="cmti-10x-x-109">Start</span>
+<span 
+class="cmti-10x-x-109">recording </span>to continue. <br 
+class="newline" /><br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Stop </span><span 
+class="msam-10x-x-109">&#x25B8;</span><span 
+class="cmti-10x-x-109">ctrl + S</span><br 
+class="newline" />To finish the recording with Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Recording <span 
+class="msam-10x-x-109">&#x25B8; </span>Stop or the given shortcut. You can see a recording
+counter in the task bar.
+<!--l. 62--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-170002.2.4"></a>Channel functions (zoom, navigation, marker, play)</h4>
+<!--l. 63--><p class="noindent" >The following functions are all accessible through the track control panel.<br 
+class="newline" />To <span 
+class="cmbx-10x-x-109">zoom </span>use the &#8221;+&#8221; and &#8221;-&#8221; buttons. The current zoom status is represented in the track scroll bar
+(see <a 
+href="#x1-270002.2.10">2.2.10<!--tex4ht:ref: sec:manual:usermanual:scrollbar --></a>).<br 
+class="newline" />To <span 
+class="cmbx-10x-x-109">navigate </span>hold the shift key pressed, then click with left mouse button on the waveform
+and hold it down while navigating through it. Alternatively make use of the track scroll
+bar.<br 
+class="newline" />Double click in the waveform to position the cursor. After that you can either <span 
+class="cmbx-10x-x-109">set a marker </span>or <span 
+class="cmbx-10x-x-109">play</span>
+or <span 
+class="cmbx-10x-x-109">pause </span>using the marker button <img 
+src="2manual/Marker.png" alt="PIC"  
+> or the playback button <img 
+src="2manual/playpause.png" alt="PIC"  
+> of the Track Control Panel.
+Alternatively you can use the <span 
+class="cmti-10x-x-109">ctrl + M </span>shortcut for marker. To go to the next or previous marker use
+                                                                                       
+                                                                                       
+the <img 
+src="2manual/forward.png" alt="PIC"  
+> and backward <img 
+src="2manual/backward.png" alt="PIC"  
+> buttons.<br 
+class="newline" />
+<!--l. 70--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-180002.2.5"></a>Selection</h4>
+<!--l. 71--><p class="noindent" >Before analysing or calibrating a time range selection needs to be specified. To do so drag the mouse
+over the waveform while holding down the left mouse key. This will draw a green selection rectangle
+when active. Refine your selection by adding additional time ranges or remove parts of the selection by
+holding down the right mouse key (red rectangle when active). The removing of a selection is pictured
+in the QuickGuide figure <a 
+href="#x1-10005r2">2.2b<!--tex4ht:ref: 2manual:quick_quide:calibration:sel --></a>.<br 
+class="newline" />Complete new selections can be added by Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Editor <span 
+class="msam-10x-x-109">&#x25B8; </span>Add new selection.
+<!--l. 74--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-190002.2.6"></a>Calibration</h4>
+<!--l. 75--><p class="noindent" >For calibration a 1kHz 94 dBSPL nominal sound pressure reference needs to be recorded on the same
+channel that should be calibrated.<br 
+class="newline" />Switch to &#8221;Calib.&#8221; selection in the drop-down list (initial value &#8221;Sel 2&#8221;) as shown in figure <a 
+href="#x1-10004r1">2.2a<!--tex4ht:ref: 2manual:quick_quide:calibration:dropdown --></a>. Then
+select the biggest possible range with the calibration signal and hit the &#8221;Calibrate&#8221; button. All your
+analysis are now calibrated and shown in dBSPL instead of dBFS. Calibrated analysis can
+be distinguished from uncalibrated ones by the additional &#8221;Cal factor&#8221; note under the
+widget.
+<!--l. 77--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-200002.2.7"></a>Analyze</h4>
+<!--l. 78--><p class="noindent" >When pressing the &#8221;Analyze&#8221; button of the Track Control Panel the AnalyzeWidget will show up in
+the Analyzer window. When analyzing the same selection of the same track again, the old
+AnalyzeWidget will overwritten with the new selection. For new selections or tracks, a new
+AnalyzeWidget will be added to the Analyzer window. The user can choose between the following
+analysis through the analyze type selection or create own AnalyzeWidgets as explained in <a 
+href="#x1-280002.2.11">2.2.11<!--tex4ht:ref: sec:manual:usermanual:statusbar --></a>.
+  <h5 class="subsubsectionHead"><a 
+ id="x1-210002.2.7"></a><span 
+class="cmbx-10x-x-109">Octave band analysis </span>(FFT)</h5>
+<!--l. 80--><p class="noindent" >Apply a one sided octave band analysis with the FFT algorithm with N = 1, 3, 6, 12, 24 on the
+selection. The values are plotted frequency-weighted depending on the widget selection.
+  <h5 class="subsubsectionHead"><a 
+ id="x1-220002.2.7"></a><span 
+class="cmbx-10x-x-109">Sound pressure level over time </span>(SPL)</h5>
+<!--l. 83--><p class="noindent" >Plots the sound pressure level dBSPL over time of the current selection, the values are frequency- and
+time-weighted depending on the widget selection.
+                                                                                       
+                                                                                       
+  <h5 class="subsubsectionHead"><a 
+ id="x1-230002.2.7"></a><span 
+class="cmbx-10x-x-109">Histogram </span>(Hist.)</h5>
+<!--l. 85--><p class="noindent" >The histogram analysis is a sound pressure level occurrence distribution. In other words the probability
+of occurrence of the SPL is plotted against the SPL values. Furthermore a cumulative sum curve is
+overlayed.
+<!--l. 88--><p class="noindent" >
+  <h5 class="subsubsectionHead"><a 
+ id="x1-240002.2.7"></a>AnalyzeWidget</h5>
+<!--l. 88--><p class="noindent" >&#x00A0;   <span 
+class="cmbx-10x-x-109">Control Panel </span>Regarding the widget itself, the user can configure the widget parameters and plot
+navigation through the Analyze Control Panel of each widget. This covers frequency weighting
+(A, B, C, D, Z), time weighting (slow, fast, impulse) and optional parameters. As well as
+zoom, pan (navigation) and reset functionality of the plot. To <span 
+class="cmbx-10x-x-109">zoom </span>in the plot, click the
+zoom toggle button and drag a rectangle in the AnalyzeWidget plot. Navigate through
+the plot by toggling the <span 
+class="cmbx-10x-x-109">pan </span>button. Zoom out by resetting the settings with the <span 
+class="cmbx-10x-x-109">reset</span>
+button.<br 
+class="newline" />
+<!--l. 91--><p class="indent" >  <span 
+class="cmbx-10x-x-109">Labels </span>On top of each widget is a title label that fulfills the format:<br 
+class="newline" /><span 
+class="cmtt-10x-x-109">filename[channelNo] selectionNo: analyzeType</span><br 
+class="newline" />and on bottom of each widget is an modifiable info label with additional information e.g. whether
+calibration is set:<br 
+class="newline" /><span 
+class="cmtt-10x-x-109">Calibrated: </span>no, calibration factor <span 
+class="cmtt-10x-x-109">Weighting: </span>A, B, C, Z <span 
+class="cmtt-10x-x-109">Meter Speed: </span>slow, fast, impulse.
+<!--l. 97--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.8</span>&#x00A0;&#x00A0;<a 
+ id="x1-250002.2.8"></a>Generate Report</h4>
+<!--l. 98--><p class="noindent" >To export a report file the identically named checkbox of all desired AnalyzeWidgets needs to be
+checked, which can be found rightmost on the Analyze Control Panel. All widgets can
+be activated by the shortcut <span 
+class="cmti-10x-x-109">ctrl + A </span>or Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Report <span 
+class="msam-10x-x-109">&#x25B8; </span>Select all and deactivated
+by Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Report <span 
+class="msam-10x-x-109">&#x25B8; </span>Deselect all. When finished with the report selection, the report
+can be generated by <span 
+class="cmti-10x-x-109">ctrl + E </span>or Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Report <span 
+class="msam-10x-x-109">&#x25B8; </span>Export... Set the save location and
+specify the file format in the dialog: PDF, HTML or PNG. For PDF every channel will be
+exported on a new page, whereby after every third widget a new page will be created.
+HTML will export all information among themselves and PNG will export the raw plot only
+without title and information label of all selected AnalyzeWidgets as Portable Network
+Graphics.
+<!--l. 100--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.9</span>&#x00A0;&#x00A0;<a 
+ id="x1-260002.2.9"></a>Views</h4>
+<!--l. 101--><p class="noindent" >Through Menu <span 
+class="msam-10x-x-109">&#x25B8; </span>Views <span 
+class="msam-10x-x-109">&#x25B8; </span>the layout of SNARE can be switched between nested view
+(which is set by default) or tab view. Second will group all analyses in one tab and the
+editor in the other tab. A quick switch between the view modes is accessible by <span 
+class="cmti-10x-x-109">ctrl + T</span>
+for tab view or <span 
+class="cmti-10x-x-109">ctrl + N </span>for nested view. In addition the modular Editor and Analyzer
+part of SNARE program can be dragged and dropped freely to be arranged to the users
+need.
+                                                                                       
+                                                                                       
+<!--l. 103--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.10</span>&#x00A0;&#x00A0;<a 
+ id="x1-270002.2.10"></a>Track Scrollbar</h4>
+<!--l. 104--><p class="noindent" >The Track scrollbar helps to orient oneself by showing the current zoom status represented by a green
+rectangle related to the longest file length figured as the whole bar. It can be used to scroll through the
+files simultaneously by click and drag the green rectangle.
+<!--l. 106--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.11</span>&#x00A0;&#x00A0;<a 
+ id="x1-280002.2.11"></a>Status Bar</h4>
+<!--l. 107--><p class="noindent" >The dynamic status bar provides information about the current calculation processes like Rendering or
+Recording. It also shows the among of imported widgets and the number of current active
+widgets.
+<!--l. 109--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.2.12</span>&#x00A0;&#x00A0;<a 
+ id="x1-290002.2.12"></a>Menu Bar</h4>
+<!--l. 110--><p class="noindent" >The menu bar offers access to the main functionality of SNARE. It is grouped in File, Recording,
+Editor, Report, Views and Help and contains in detail:<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">File</span>: Open Wav...<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Recording</span>: Select Input.., Start, Pause, Stop<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Editor</span>: Add new Selection<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Report</span>: Select all, Deselect all, Export...<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Views</span>: Tab View, Nested View<br 
+class="newline" /><span 
+class="cmbx-10x-x-109">Help</span>: QuickGuide and documentation.<br 
+class="newline" />
+                                                                                       
+                                                                                       
+  <h3 class="sectionHead"><span class="titlemark">2.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-300002.3"></a>Create own Analyze Widgets</h3>
+<!--l. 120--><p class="noindent" ><span 
+class="cmti-10x-x-109">Creating own widgets only works with an installed Python interpreter and the Python</span>
+<span 
+class="cmti-10x-x-109">scripts</span><span class="footnote-mark"><a 
+href="thesis8.html#fn7x3"><sup class="textsuperscript">7</sup></a></span><a 
+ id="x1-30001f7"></a> <span 
+class="cmti-10x-x-109">, it</span>
+<span 
+class="cmti-10x-x-109">does not work with the freezed binaries.</span><br 
+class="newline" />For a new Widget duplicate the example AnalyzeWidget folder to AnalyseTools/WidgetNAME and
+adjust the ending of the containing files to <span 
+class="cmtt-10x-x-109">*NAME</span>, where NAME stands for the unique AnalyzeWidget
+short name, e.g. &#8221;Fft&#8221;. Make sure, the folder prefix is <span 
+class="cmtt-10x-x-109">Widget*</span>. Also adopt the class names
+of the files (e.g. &#8222;WidgetExample.py&#8220; contains the <span 
+class="cmtt-10x-x-109">WidgetExample </span>class) to coincident
+the file name. Also ensure to correct the library imports in the header part of the scripts
+to:<br 
+class="newline" /><br 
+class="newline" />from AnalyzeTools.Widget.*NAME import &#x2026;<br 
+class="newline" /><br 
+class="newline" />A capsuled AnalyzeWidget consists of the necessary <span 
+class="cmtt-10x-x-109">CalculationNAME.py</span>, <span 
+class="cmtt-10x-x-109">PlotNAME.py</span>,
+<br 
+class="newline" /><span 
+class="cmtt-10x-x-109">WidgetNAME.py </span>and <span 
+class="cmtt-10x-x-109">Info.txt </span>files. Optional a <span 
+class="cmtt-10x-x-109">NavNAME.py </span>can be added, to extend and shadow the
+existing <span 
+class="cmtt-10x-x-109">NavMenuStandard </span>class, e.g. for another dropdown selection when optional widget parameters
+are set. After the Info.txt file is adopted as explained in <a 
+href="#x1-320002.3.2">2.3.2<!--tex4ht:ref: sec:manual:usermanual:ownwidget:info --></a>, the widget is now ready and will be
+dynamically imported into SNARE. Now its time to adopt the signal processing in the
+<span 
+class="cmtt-10x-x-109">CalculationNAME </span>class to your needs.
+  <h4 class="subsectionHead"><span class="titlemark">2.3.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-310002.3.1"></a>Info.txt</h4>
+<!--l. 126--><p class="noindent" >The AnalyzeWidget Info.txt text file contains the basic widget parameters and needs to meet following
+requirements and structure. It assigns variables in a table, where <span 
+class="cmtt-10x-x-109">ident </span>(variable names) are set
+against the <span 
+class="cmtt-10x-x-109">values </span>(variable values), split by a colon separator. The first two rows are ignored, as well
+as empty lines.<br 
+class="newline" /><br 
+class="newline" />Needed variables are: ShortName, Filename.<br 
+class="newline" />Optional variables are: OptParameter1, OptParameter1InitVal, OptParameter2, OptParameter2InitVal,
+OptParameter3, OptParameter3InitVal, ParameterFqWeightingInitVal, ParameterTimeWeightingInitVal.<br 
+class="newline" />
+  <!--l. 131-->
+<a 
+ id="x1-31001r1"></a>
+<a 
+ id="x1-31002"></a>
+        <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-31003r1"></a><span 
+class="cmr-6">1</span></span><span 
+class="cmtt-8x-x-75">===================</span><span 
+class="cmtt-8x-x-75">WidgetInformationFile</span><span 
+class="cmtt-8x-x-75">=========================</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31004r2"></a><span 
+class="cmr-6">2</span></span><span 
+class="cmtt-8x-x-75">====</span><span 
+class="cmtt-8x-x-75">Fill</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">out</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">the</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">values</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">under</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">"</span><span 
+class="cmtt-8x-x-75">ident</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">values</span><span 
+class="cmtt-8x-x-75">"</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">for</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">your</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">Widget</span><span 
+class="cmtt-8x-x-75">====</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31005r3"></a><span 
+class="cmr-6">3</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31006r4"></a><span 
+class="cmr-6">4</span></span><span 
+class="cmtt-8x-x-75">ident</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">values</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31007r5"></a><span 
+class="cmr-6">5</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31008r6"></a><span 
+class="cmr-6">6</span></span><span 
+class="cmtt-8x-x-75">ShortName</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">FFT</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31009r7"></a><span 
+class="cmr-6">7</span></span><span 
+class="cmtt-8x-x-75">Filename</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">WidgetFft</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31010r8"></a><span 
+class="cmr-6">8</span></span><span 
+class="cmtt-8x-x-75">OptParameter1</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">nthfft</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31011r9"></a><span 
+class="cmr-6">9</span></span><span 
+class="cmtt-8x-x-75">OptParameter1InitVal</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">3</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31012r10"></a><span 
+class="cmr-6">10</span></span><span 
+class="cmtt-8x-x-75">OptParameter2</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">None</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31013r11"></a><span 
+class="cmr-6">11</span></span><span 
+class="cmtt-8x-x-75">OptParameter2InitVal</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">None</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31014r12"></a><span 
+class="cmr-6">12</span></span><span 
+class="cmtt-8x-x-75">OptParameter3</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">None</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-31015r13"></a><span 
+class="cmr-6">13</span></span><span 
+class="cmtt-8x-x-75">OptParameter3InitVal</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">None</span>
+        
+        <br />
+             <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Listing&#x00A0;2.1:
+             </td><td  
+class="content">Sample
+             Info.txt
+             file,
+             containing
+             one
+             optional
+             parameter.</td></tr></table></div><!--tex4ht:label?: x1-310002.3 -->
+  </div>
+                                                                                       
+                                                                                       
+<!--l. 148--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.3.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-320002.3.2"></a>Analyze Control Panel adaptation</h4>
+<!--l. 149--><p class="noindent" >If the widget contains optional parameters, in the most cases these parameters should be controlled by
+the end-user. To realize this we, however need to customize the Analyze Control Panel, more precisely
+the <span 
+class="cmtt-10x-x-109">Nav </span>class. Normally a widget (like the example widget) takes the <span 
+class="cmtt-10x-x-109">NavMenuStandard </span>class from
+the AnalyzeTools/Nav.py file. To adopt the menu, you can have a look at the Fft widget,
+where the <span 
+class="cmtt-10x-x-109">NavMenu </span>class from the same file is derevated and adjusted. However, we need to
+proceed in this case by adding an additional <span 
+class="cmtt-10x-x-109">NavNAME.py </span>in the widget folder and adopt
+the import in the <span 
+class="cmtt-10x-x-109">WidgetNAME </span>class as well as adjust the initialization in the <span 
+class="cmtt-10x-x-109">WidgetNAME</span>
+constructor.
+<!--l. 1--><p class="noindent" >
+  <h3 class="sectionHead"><span class="titlemark">2.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-330002.4"></a>Editor Adjustment Tutorial</h3>
+<!--l. 2--><p class="noindent" >In this tutorial the design of the Editor-module will be examined in detail and it will be
+shown, how this design can be used to easily adjust the program behaviour to fit a specific
+purpose.
+<!--l. 4--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.4.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-340002.4.1"></a>Advantages of Qt&#8217;s Signal/Slot</h4>
+<!--l. 5--><p class="noindent" >The Editor area consists of all classes that start with <span 
+class="cmtt-10x-x-109">Track</span>, most of which inherit from <span 
+class="cmtt-10x-x-109">TrackManager</span>.
+The design heavily relies on Qt&#8217;s Signal-Slot System. It allows the programmer to define a signal, that
+will be triggered on a certain event, a slot that matches the parameters of the signal and a connection
+between one signal and one or many slots. These connections can be made or broken at runtime. In
+the implementation of SNARE&#8217;s editor area, we defined a set of all required signals and
+slots in the base class, <span 
+class="cmtt-10x-x-109">TrackAbstract </span>and also automated the connection making. This
+means, if any class derived from <span 
+class="cmtt-10x-x-109">TrackAbstract </span>gets instantiated, the constructor will, if
+provided with an object-reference, automatically connect its signals and slots with the parent
+object&#8217;s signals and slots. The endpoint of those signal paths, the <span 
+class="cmtt-10x-x-109">TrackManager </span>also has
+the same interface, but could be seen as a kind of router for the signals. In the following
+tutorial, we will show how this property can be used to make adjustments to the editor
+area.
+<!--l. 8--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">2.4.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-350002.4.2"></a>Code Example</h4>
+<!--l. 10--><p class="noindent" >In its default set-up, SNARE is configured to analyse a multi-track recording of one event,
+meaning that the time on all tracks is assumed to be identical. But one might also want
+to analyse a set of data containing different events on different tracks. In this scenario
+it would not make sense that the drawing of selection rectangles is synchronised on all
+tracks.
+  <!--l. 13-->
+                                                                                       
+                                                                                       
+<a 
+ id="x1-35001r2"></a>
+<a 
+ id="x1-35002"></a>
+        <div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x1-35003r1"></a><span 
+class="cmr-6">1</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mousePress</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35004r2"></a><span 
+class="cmr-6">2</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">sender</span><span 
+class="cmtt-8x-x-75">()</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_startSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35005r3"></a><span 
+class="cmr-6">3</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35006r4"></a><span 
+class="cmr-6">4</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mouseRelease</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35007r5"></a><span 
+class="cmr-6">5</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">sender</span><span 
+class="cmtt-8x-x-75">()</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_endSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35008r6"></a><span 
+class="cmr-6">6</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35009r7"></a><span 
+class="cmr-6">7</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mouseMove</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35010r8"></a><span 
+class="cmr-6">8</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">sender</span><span 
+class="cmtt-8x-x-75">()</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_moveSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span>
+        
+        <br />
+                   <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Listing&#x00A0;2.2:
+                   </td><td  
+class="content">Separated
+                   channel
+                   selections</td></tr></table></div><!--tex4ht:label?: x1-350002.4 -->
+  </div>
+  <!--l. 24-->
+<a 
+ id="x1-35011r3"></a>
+<a 
+ id="x1-35012"></a>
+        <div class="lstlisting" id="listing-3"><span class="label"><a 
+ id="x1-35013r1"></a><span 
+class="cmr-6">1</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mousePress</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35014r2"></a><span 
+class="cmr-6">2</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_startSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35015r3"></a><span 
+class="cmr-6">3</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35016r4"></a><span 
+class="cmr-6">4</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mouseRelease</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35017r5"></a><span 
+class="cmr-6">5</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_endSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35018r6"></a><span 
+class="cmr-6">6</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35019r7"></a><span 
+class="cmr-6">7</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">def</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">slo_mouseMove</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">,</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span><span 
+class="cmtt-8x-x-75">:</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><br /><span class="label"><a 
+ id="x1-35020r8"></a><span 
+class="cmr-6">8</span></span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">&#x00A0;</span><span 
+class="cmtt-8x-x-75">self</span><span 
+class="cmtt-8x-x-75">.</span><span 
+class="cmtt-8x-x-75">slo_moveSelection</span><span 
+class="cmtt-8x-x-75">(</span><span 
+class="cmtt-8x-x-75">QGraphicsSceneMouseEvent</span><span 
+class="cmtt-8x-x-75">)</span>
+        
+        <br />
+                   <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Listing&#x00A0;2.3:
+                   </td><td  
+class="content">Synchronised
+                   channel
+                   selections</td></tr></table></div><!--tex4ht:label?: x1-350002.4 -->
+  </div>
+<!--l. 35--><p class="indent" >  The listing above shows the slots of the <span 
+class="cmtt-10x-x-109">TrackManager </span>that receive any mouse input from the
+QGraphicsScene. In the first version, the signal is sent back to the object that emitted the signal by
+calling the corresponding slot of that signal. (<span 
+class="cmtt-10x-x-109">self.sender() </span>returns the sending object) The second
+version shows how the signal can be sent back to all tracks by emitting the corresponding signal of the
+<span 
+class="cmtt-10x-x-109">TrackManager</span>. This works, because all track objects are subscribers to this signal of their parent
+object. (The alternative being a for-loop over all tracks, e.g. to handle one of the tracks
+differently)
+<!--l. 37--><p class="indent" >  Similar adjustments could be made to: synchronisig the displayed waveform-portion, placing markers
+and cursors, selection and analysis-type menu and others.
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+  <h2 class="chapterHead"><span class="titlemark">7</span>&#x00A0;&#x00A0;<a 
+ id="x1-600007"></a>Appendix</h2>
+               
+                                                                                       
+<!--l. 6--><p class="indent" >  </div><hr class="endfigure">
+  <h3 class="sectionHead"><span class="titlemark">7.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-620007.1"></a>Appendix A: Setup Tutorial for Windows</h3>
+<!--l. 2--><p class="noindent" >This tutorial will explain the necessary steps to install Python with all required libraries to run
+SNARE on Windows. These steps were tested using a new Windows 7 installation. Please note that all
+parts, Python and its libraries, are constantly developed and changed, therefore this procedure might
+not work with future versions.
+<!--l. 4--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">7.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-630007.1.1"></a>Installing Python</h4>
+<!--l. 5--><p class="noindent" >SNARE has been developed with Python 3.4 and Python 3.5. We recommend using the latest version,
+Python 3.5, which can be obtained from the Python Project&#8217;s web page:
+<!--l. 7--><p class="indent" >  <a 
+href="https://www.python.org/downloads/windows/" class="url" ><span 
+class="cmtt-10x-x-109">https://www.python.org/downloads/windows/</span></a>
+<!--l. 10--><p class="noindent" >Select a stable release of Python 3.5 from the list and proceed to download. On installation, it is
+important to allow Python to add its directory to the windows <span 
+class="cmtt-10x-x-109">PATH </span>registry entry. This way Python
+can be accessed from any command line interface.
+<!--l. 13--><p class="indent" >  <hr class="figure"><div class="figure" 
+>
+                                                                                       
+                                                                                       
+<a 
+ id="x1-63001r1"></a>
+                                                                                       
+                                                                                       
+
+<!--l. 15--><p class="noindent" ><img 
+src="AddToPATH.png" alt="PIC"  
+>
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Figure&#x00A0;7.1: </td><td  
+class="content">Add Python to the system&#8217;s default paths</td></tr></table></div><!--tex4ht:label?: x1-63001r1 -->
+                                                                                       
+                                                                                       
+<!--l. 18--><p class="indent" >  </div><hr class="endfigure">
+  <h4 class="subsectionHead"><span class="titlemark">7.1.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-640007.1.2"></a>Installing the SciPy packages</h4>
+<!--l. 21--><p class="noindent" >The easiest way to install compatible packages for the SciPy environment is to download them
+from:
+<!--l. 24--><p class="indent" >  <a 
+href="http://www.lfd.uci.edu/~gohlke/pythonlibs/" class="url" ><span 
+class="cmtt-10x-x-109">http://www.lfd.uci.edu/</span><span 
+class="cmtt-10x-x-109">~</span><span 
+class="cmtt-10x-x-109">gohlke/pythonlibs/</span></a>
+<!--l. 27--><p class="noindent" >To run SNARE on a 32bit Windows, one will need:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmtt-10x-x-109">numpy-1.11.2+mkl-cp35-cp35m-win32.whl</span>
+     </li>
+     <li class="itemize"><span 
+class="cmtt-10x-x-109">scipy-0.18.1-cp35-cp35m-win32.whl</span></li></ul>
+<!--l. 32--><p class="noindent" >To install, open a command line interface in the download directory and call:
+<!--l. 35--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install "numpy-1.11.2+mkl-cp35-cp35m-win32.whl"</span>
+<!--l. 37--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install "scipy-0.18.1-cp35-cp35m-win32.whl"</span>
+<!--l. 39--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">7.1.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-650007.1.3"></a>Further packages</h4>
+<!--l. 40--><p class="noindent" >SNARE also requires some other packages that can be downloaded automatically by pip. Simply
+use:
+<!--l. 42--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install pyaudio</span>
+<!--l. 44--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install pyqt5</span>
+<!--l. 46--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install pandas</span>
+<!--l. 48--><p class="indent" >  <span 
+class="cmtt-10x-x-109">pip install matplotlib</span>
+<!--l. 50--><p class="noindent" >
+  <h4 class="subsectionHead"><span class="titlemark">7.1.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-660007.1.4"></a>Run SNARE</h4>
+<!--l. 51--><p class="noindent" >SNARE can now be easily launched by double-click on the &#8221;Start.py&#8221; file or by calling it through a
+command line interface:
+<!--l. 53--><p class="indent" >  <span 
+class="cmtt-10x-x-109">python Start.py</span>
+   </p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="autogen/modules.html" class="btn btn-neutral float-right" title="v0.3" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to SNARE’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

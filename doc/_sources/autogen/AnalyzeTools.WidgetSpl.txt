@@ -1,0 +1,38 @@
+AnalyzeTools.WidgetSpl package
+==============================
+
+Submodules
+----------
+
+AnalyzeTools.WidgetSpl.CalculationSpl module
+--------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetSpl.CalculationSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetSpl.PlotSpl module
+-------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetSpl.PlotSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetSpl.WidgetSpl module
+---------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetSpl.WidgetSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: AnalyzeTools.WidgetSpl
+    :members:
+    :undoc-members:
+    :show-inheritance:

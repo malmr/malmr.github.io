@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MainUI package &mdash; SNARE Documentation 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="v0.3" href="modules.html"/>
+        <link rel="next" title="AnalyzeTools package" href="AnalyzeTools.html"/>
+        <link rel="prev" title="Main module" href="Main.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">v0.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Start.html">Start module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MainUI package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.InputSelectorDialog">MainUI.InputSelectorDialog module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.MainWindow">MainUI.MainWindow module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.Menubar">MainUI.Menubar module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.StartDialog">MainUI.StartDialog module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.Statusbar">MainUI.Statusbar module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI.SubWindow">MainUI.SubWindow module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-MainUI">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeTools.html">AnalyzeTools package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorBackend.html">EditorBackend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorUI.html">EditorUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reports.html">Reports package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">v0.3</a> &raquo;</li>
+      
+    <li>MainUI package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/MainUI.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mainui-package">
+<h1>MainUI package<a class="headerlink" href="#mainui-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-MainUI.InputSelectorDialog">
+<span id="mainui-inputselectordialog-module"></span><h2>MainUI.InputSelectorDialog module<a class="headerlink" href="#module-MainUI.InputSelectorDialog" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.InputSelectorDialog.InputSelectorDialog">
+<em class="property">class </em><code class="descclassname">MainUI.InputSelectorDialog.</code><code class="descname">InputSelectorDialog</code><span class="sig-paren">(</span><em>channels</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.InputSelectorDialog.InputSelectorDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>This class creates a dialog window that lets the user select an input audio device and then select which channels
+to record form that device. The result of the selection is saved in self.channels, a list. The last entry of the
+list is the device index while all other entries list the channels to record: e.g. [0,1,2,4] -&gt; record channel 0,
+1 and 2 from device 4.</p>
+<dl class="method">
+<dt id="MainUI.InputSelectorDialog.InputSelectorDialog.buildDrop">
+<code class="descname">buildDrop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.InputSelectorDialog.InputSelectorDialog.buildDrop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves all available audio devices from PyAudio and filters them to only display input devices. All matching
+devices are added to a dropdown menu.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.InputSelectorDialog.InputSelectorDialog.buildTree">
+<code class="descname">buildTree</code><span class="sig-paren">(</span><em>dropdownIndex</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.InputSelectorDialog.InputSelectorDialog.buildTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of checkable items after the user selected an input device. Retrieves the number of available
+input channels for the given device from PyAudio.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dropdownIndex</strong> &#8211; The list self.devices links the dropdown index to the device index</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.InputSelectorDialog.InputSelectorDialog.confirm">
+<code class="descname">confirm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.InputSelectorDialog.InputSelectorDialog.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>When the user has selected device and channel, this method will compose the list and close the dialog.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.InputSelectorDialog.InputSelectorDialog.resource_path">
+<code class="descname">resource_path</code><span class="sig-paren">(</span><em>relative_path</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.InputSelectorDialog.InputSelectorDialog.resource_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI.MainWindow">
+<span id="mainui-mainwindow-module"></span><h2>MainUI.MainWindow module<a class="headerlink" href="#module-MainUI.MainWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.MainWindow.MainWindow">
+<em class="property">class </em><code class="descclassname">MainUI.MainWindow.</code><code class="descname">MainWindow</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<p>The MainWindow class combines the menubar and statusbar with the analysis and editor dockwidget to create the main
+window of the SNARE application. The analysis and editor widgets communicate mostly directly with the backend, for
+all other user interface elements, this class provides the interface to the backend. E.g. all input on the menubar
+and all output on the statusbar.</p>
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.aboutDialog">
+<code class="descname">aboutDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.aboutDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the about dialog message box.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.addAnalysis">
+<code class="descname">addAnalysis</code><span class="sig-paren">(</span><em>analysis</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.addAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface relay to add an analysis widget to the analysis area.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>analysis</strong> &#8211; The AnalysisWidget to add.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.addTrack">
+<code class="descname">addTrack</code><span class="sig-paren">(</span><em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.addTrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface relay to add Track elements to the editor area.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>track</strong> &#8211; The TrackUI object to add.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.configRecord">
+<code class="descname">configRecord</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.configRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.configRecordWindow">
+<code class="descname">configRecordWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.configRecordWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a dialog (InputSelectorDialog) for selecting an input device and channel. The results of the selection
+are then transmitted to the backend.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.deselectAllReports">
+<code class="descname">deselectAllReports</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.deselectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.dragEnterEvent">
+<code class="descname">dragEnterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.dragEnterEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DragEnterEvent for Drag and Drop file support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.dragMoveEvent">
+<code class="descname">dragMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.dragMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DragMoveEvent for Drag and Drop file support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.dropEvent">
+<code class="descname">dropEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.dropEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DropEvent for Drag and Drop file support. Before passing to __openWave__, fileNames is casted to the
+needed format.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.exportReport">
+<code class="descname">exportReport</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.exportReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.helpDialog">
+<code class="descname">helpDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.helpDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the help dialog message box.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.nestedView">
+<code class="descname">nestedView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.nestedView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot to switch the main window view to a nested style. (Windows side by side)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.newSelection">
+<code class="descname">newSelection</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.newSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.openWave">
+<code class="descname">openWave</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.openWave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.pauseRecord">
+<code class="descname">pauseRecord</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.pauseRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.removeAnalysis">
+<code class="descname">removeAnalysis</code><span class="sig-paren">(</span><em>analysis</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.removeAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface relay to remove an analysis widget from the analysis area.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>analysis</strong> &#8211; Reference to the AnalysisWidget to remove.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.removeTrack">
+<code class="descname">removeTrack</code><span class="sig-paren">(</span><em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.removeTrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface relay to remove a Track element from the editor area.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>track</strong> &#8211; Reference to the TrackUI object to remove.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.selectAllReports">
+<code class="descname">selectAllReports</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.selectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.startRecord">
+<code class="descname">startRecord</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.startRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.MainWindow.MainWindow.stopRecord">
+<code class="descname">stopRecord</code><a class="headerlink" href="#MainUI.MainWindow.MainWindow.stopRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.tabView">
+<code class="descname">tabView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.tabView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot to switch the main window view to a tabbed style.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.updateAnalysesStatus">
+<code class="descname">updateAnalysesStatus</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.updateAnalysesStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay message to the status bar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> &#8211; Integer containing the number of currently loaded widgets.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.updateRecordingStatus">
+<code class="descname">updateRecordingStatus</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.updateRecordingStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay message to the status bar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> &#8211; String containing a recording status message.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.MainWindow.MainWindow.updateWaveformMessage">
+<code class="descname">updateWaveformMessage</code><span class="sig-paren">(</span><em>quelength</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.MainWindow.MainWindow.updateWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relay message to the status bar.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>quelength</strong> &#8211; Integer containing the current workload of the render threads.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI.Menubar">
+<span id="mainui-menubar-module"></span><h2>MainUI.Menubar module<a class="headerlink" href="#module-MainUI.Menubar" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.Menubar.Menubar">
+<em class="property">class </em><code class="descclassname">MainUI.Menubar.</code><code class="descname">Menubar</code><a class="headerlink" href="#MainUI.Menubar.Menubar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenuBar</span></code></p>
+<p>This class creates the menubar displayed on top of SNARE&#8217;s main window.</p>
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.aboutDialog">
+<code class="descname">aboutDialog</code><a class="headerlink" href="#MainUI.Menubar.Menubar.aboutDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.changeViewNested">
+<code class="descname">changeViewNested</code><a class="headerlink" href="#MainUI.Menubar.Menubar.changeViewNested" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.changeViewTab">
+<code class="descname">changeViewTab</code><a class="headerlink" href="#MainUI.Menubar.Menubar.changeViewTab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.configRecord">
+<code class="descname">configRecord</code><a class="headerlink" href="#MainUI.Menubar.Menubar.configRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.deselectAllReports">
+<code class="descname">deselectAllReports</code><a class="headerlink" href="#MainUI.Menubar.Menubar.deselectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.exportReport">
+<code class="descname">exportReport</code><a class="headerlink" href="#MainUI.Menubar.Menubar.exportReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.helpDialog">
+<code class="descname">helpDialog</code><a class="headerlink" href="#MainUI.Menubar.Menubar.helpDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.newSelection">
+<code class="descname">newSelection</code><a class="headerlink" href="#MainUI.Menubar.Menubar.newSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.openWave">
+<code class="descname">openWave</code><a class="headerlink" href="#MainUI.Menubar.Menubar.openWave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.pauseRecord">
+<code class="descname">pauseRecord</code><a class="headerlink" href="#MainUI.Menubar.Menubar.pauseRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.selectAllReports">
+<code class="descname">selectAllReports</code><a class="headerlink" href="#MainUI.Menubar.Menubar.selectAllReports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.startRecord">
+<code class="descname">startRecord</code><a class="headerlink" href="#MainUI.Menubar.Menubar.startRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="MainUI.Menubar.Menubar.stopRecord">
+<code class="descname">stopRecord</code><a class="headerlink" href="#MainUI.Menubar.Menubar.stopRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI.StartDialog">
+<span id="mainui-startdialog-module"></span><h2>MainUI.StartDialog module<a class="headerlink" href="#module-MainUI.StartDialog" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.StartDialog.StartDialog">
+<em class="property">class </em><code class="descclassname">MainUI.StartDialog.</code><code class="descname">StartDialog</code><span class="sig-paren">(</span><em>result</em>, <em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>On startup of SNARE, this dialog is presented to the user. There is a choice between opening a WAVE-file (and
+setting sample rate and sample width this way) or manually selecting sample rate and sample width and then
+selecting an input device and channels (via InputSelectorDialog)</p>
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.confirm">
+<code class="descname">confirm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.confirm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressing &#8220;Record...&#8221; will lead to the InputSelectorDialog and only set sample rate and sample width.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.dragEnterEvent">
+<code class="descname">dragEnterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.dragEnterEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DragEnterEvent for Drag and Drop file support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.dragMoveEvent">
+<code class="descname">dragMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.dragMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DragMoveEvent for Drag and Drop file support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.dropEvent">
+<code class="descname">dropEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.dropEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites DropEvent for Drag and Drop file support. Before passing to openFiles, fileNames is casted to the
+needed format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.openFile">
+<code class="descname">openFile</code><span class="sig-paren">(</span><em>fileNames=False</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.openFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a Wav File.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.StartDialog.StartDialog.openFiles">
+<code class="descname">openFiles</code><span class="sig-paren">(</span><em>files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.StartDialog.StartDialog.openFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loop for opening Wav files. Triggered by pressing &#8220;Open Wav&#8221; or by Drag and Drop in the Window. If no valid
+wave-file has been selected, StartDialog will return to its initial state. First check if method is triggered by
+&#8220;Open Files...&#8221; button to open file dialog. Then make sure that filename is not empty, which is the case by
+canceling the file dialog.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI.Statusbar">
+<span id="mainui-statusbar-module"></span><h2>MainUI.Statusbar module<a class="headerlink" href="#module-MainUI.Statusbar" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.Statusbar.Statusbar">
+<em class="property">class </em><code class="descclassname">MainUI.Statusbar.</code><code class="descname">Statusbar</code><a class="headerlink" href="#MainUI.Statusbar.Statusbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QStatusBar</span></code></p>
+<p>A status bar displayed at the bottom of SNARE&#8217;s main window.</p>
+<dl class="method">
+<dt id="MainUI.Statusbar.Statusbar.updateAnalysesStatus">
+<code class="descname">updateAnalysesStatus</code><span class="sig-paren">(</span><em>cntwidgets</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.Statusbar.Statusbar.updateAnalysesStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inteface for the analysis status message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cntwidgets</strong> &#8211; Takes a fully formatted message.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.Statusbar.Statusbar.updateRecordingStatus">
+<code class="descname">updateRecordingStatus</code><span class="sig-paren">(</span><em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.Statusbar.Statusbar.updateRecordingStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for the recording status message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>str</strong> &#8211; E.g. &#8220;Ready for Recording&#8221;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.Statusbar.Statusbar.updateWaveformMessage">
+<code class="descname">updateWaveformMessage</code><span class="sig-paren">(</span><em>quelength</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.Statusbar.Statusbar.updateWaveformMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for the render thread workload message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>quelength</strong> &#8211; Current workload measured in pixmaps to render</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI.SubWindow">
+<span id="mainui-subwindow-module"></span><h2>MainUI.SubWindow module<a class="headerlink" href="#module-MainUI.SubWindow" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="MainUI.SubWindow.SubWindow">
+<em class="property">class </em><code class="descclassname">MainUI.SubWindow.</code><code class="descname">SubWindow</code><a class="headerlink" href="#MainUI.SubWindow.SubWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Both the analysis window and the editor window are objects of this class. It contains a layout and an interface to
+add and remove widgets to/from the layout.</p>
+<dl class="method">
+<dt id="MainUI.SubWindow.SubWindow.addWidget">
+<code class="descname">addWidget</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.SubWindow.SubWindow.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a widget to the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> &#8211; A QWidget to add.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.SubWindow.SubWindow.removeWidget">
+<code class="descname">removeWidget</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.SubWindow.SubWindow.removeWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a widget from the layout.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> &#8211; A QWidget to remove.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="MainUI.SubWindow.SubWindowDock">
+<em class="property">class </em><code class="descclassname">MainUI.SubWindow.</code><code class="descname">SubWindowDock</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.SubWindow.SubWindowDock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDockWidget</span></code></p>
+<p>This class turns the SubWindow into a dock widget, that can be dragged, minimised and detached from the main window,
+allowing the user to set up the user interface in an individual way.</p>
+<dl class="method">
+<dt id="MainUI.SubWindow.SubWindowDock.addWidget">
+<code class="descname">addWidget</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.SubWindow.SubWindowDock.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for adding a widget, relayed to SubWindow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> &#8211; A QWidget to add.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MainUI.SubWindow.SubWindowDock.removeWidget">
+<code class="descname">removeWidget</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#MainUI.SubWindow.SubWindowDock.removeWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for removing a widget, relayed to SubWindow.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>widget</strong> &#8211; A QWidget to remove.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-MainUI">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-MainUI" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="AnalyzeTools.html" class="btn btn-neutral float-right" title="AnalyzeTools package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Main.html" class="btn btn-neutral" title="Main module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

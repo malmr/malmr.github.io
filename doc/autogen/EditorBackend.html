@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EditorBackend package &mdash; SNARE 0.1.1a documentation</title>
+  <title>EditorBackend package &mdash; SNARE Documentation 0.3 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="SNARE 0.1.1a documentation" href="../index.html"/> 
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="v0.3" href="modules.html"/>
+        <link rel="next" title="EditorUI package" href="EditorUI.html"/>
+        <link rel="prev" title="AnalyzeTools.WidgetSpl package" href="AnalyzeTools.WidgetSpl.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -48,7 +51,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> SNARE
+            <a href="../index.html" class="icon icon-home"> SNARE Documentation
           
 
           
@@ -58,7 +61,7 @@
             
             
               <div class="version">
-                0.1
+                0.3
               </div>
             
           
@@ -79,29 +82,40 @@
           
             
             
-                <!-- Local TOC -->
-                <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">EditorBackend package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.AnalyzeBuffer">EditorBackend.AnalyzeBuffer module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Audioplayer">EditorBackend.Audioplayer module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Buffer">EditorBackend.Buffer module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Calibrations">EditorBackend.Calibrations module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Channel">EditorBackend.Channel module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.MainBackend">EditorBackend.MainBackend module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Recorder">EditorBackend.Recorder module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Unpacker">EditorBackend.Unpacker module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.WavFile">EditorBackend.WavFile module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.WavFileWrite">EditorBackend.WavFileWrite module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.Waveform">EditorBackend.Waveform module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.WaveformBuffer">EditorBackend.WaveformBuffer module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.WaveformBufferChannel">EditorBackend.WaveformBufferChannel module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend.WaveformThread">EditorBackend.WaveformThread module</a></li>
-<li><a class="reference internal" href="#module-EditorBackend">Module contents</a></li>
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">v0.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Start.html">Start module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MainUI.html">MainUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AnalyzeTools.html">AnalyzeTools package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EditorBackend package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.AnalyzeBuffer">EditorBackend.AnalyzeBuffer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Audioplayer">EditorBackend.Audioplayer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Buffer">EditorBackend.Buffer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Calibrations">EditorBackend.Calibrations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Channel">EditorBackend.Channel module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.MainBackend">EditorBackend.MainBackend module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Recorder">EditorBackend.Recorder module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Unpacker">EditorBackend.Unpacker module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.WavFile">EditorBackend.WavFile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.WavFileWrite">EditorBackend.WavFileWrite module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.Waveform">EditorBackend.Waveform module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.WaveformBuffer">EditorBackend.WaveformBuffer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.WaveformBufferChannel">EditorBackend.WaveformBufferChannel module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend.WaveformThread">EditorBackend.WaveformThread module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-EditorBackend">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditorUI.html">EditorUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reports.html">Reports package</a></li>
 </ul>
 </li>
 </ul>
-</div>
+
             
           
         </div>
@@ -113,7 +127,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">SNARE</a>
+        <a href="../index.html">SNARE Documentation</a>
       </nav>
 
 
@@ -129,6 +143,8 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">v0.3</a> &raquo;</li>
       
     <li>EditorBackend package</li>
       <li class="wy-breadcrumbs-aside">
@@ -153,7 +169,7 @@
 <span id="editorbackend-analyzebuffer-module"></span><h2>EditorBackend.AnalyzeBuffer module<a class="headerlink" href="#module-EditorBackend.AnalyzeBuffer" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer">
-<em class="property">class </em><code class="descclassname">EditorBackend.AnalyzeBuffer.</code><code class="descname">AnalyzeBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>calibrations</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">EditorBackend.AnalyzeBuffer.</code><code class="descname">AnalyzeBuffer</code><span class="sig-paren">(</span><em>buffer</em>, <em>calibrations</em>, <em>sampleRate</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtCore.QObject</span></code></p>
 <p>When the user requests an analysis, all selected areas are composed to one NumPy array and stored here before
 an analysis widget picks it up. Also the calibration is added here.</p>
@@ -203,6 +219,26 @@ avoid precision loss and calibrated.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>channel</strong> &#8211; The requested Channel.</li>
 <li><strong>selNo</strong> &#8211; Name of the selection requested.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EditorBackend.AnalyzeBuffer.AnalyzeBuffer.getOffset">
+<code class="descname">getOffset</code><span class="sig-paren">(</span><em>channel</em>, <em>selNo</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.AnalyzeBuffer.AnalyzeBuffer.getOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the interface for analysis widgets to access offset-data. Before handover it is converted to a float type to
+avoid precision loss and calibrated. This is relevant to e.g. the spl-plot that needs a settling time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> &#8211; The requested Channel.</li>
+<li><strong>selNo</strong> &#8211; Name of the selection requested.</li>
+<li><strong>offsetLength</strong> &#8211; Complete length of desired offset in samples.</li>
 </ul>
 </td>
 </tr>
@@ -667,7 +703,7 @@ accordingly.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>channel</strong> &#8211; Delete data associated with this channel objects.</li>
-<li><strong>track</strong> (<a class="reference internal" href="EditorUI.html#module-EditorUI.TrackUI" title="EditorUI.TrackUI"><em>TrackUI</em></a>) &#8211; Track QWidget to delete from MainWindow.</li>
+<li><strong>track</strong> (<a class="reference internal" href="EditorUI.html#module-EditorUI.TrackUI" title="EditorUI.TrackUI"><em>EditorUI.TrackUI</em></a>) &#8211; Track QWidget to delete from MainWindow.</li>
 </ul>
 </td>
 </tr>
@@ -976,8 +1012,7 @@ therefore the raw bytearray is padded with 1 Byte of zeros before converting it 
 <p>This class reads standard RIFF-WAVE-files and BWF-WAVE-files. Once successfully opened, raw audio data can be
 accessed in blocked segments by providing the channel number and a sample to start from. 16bit and 24bit files
 are supported as well as audio-files with an arbitrary number of channels.</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
+<table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -985,7 +1020,7 @@ are supported as well as audio-files with an arbitrary number of channels.</p>
 </tr>
 </tbody>
 </table>
-<p>file = &#8220;test.wav&#8221;
+<p>file = &#8216;test.wav&#8217;
 sampleRate = 44100
 sampleWidth = 2
 blockSize = 441000 # 10 seconds per block</p>
@@ -994,7 +1029,6 @@ blockSize = 441000 # 10 seconds per block</p>
 leftChannel = 0</p>
 <p>rawData = wav.getBlock(startSample, leftChannel)</p>
 <p>#rawData could now be fed to e.g. a pyaudio callback</p>
-</div></blockquote>
 <dl class="method">
 <dt id="EditorBackend.WavFile.WavFile.blockCount">
 <code class="descname">blockCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorBackend.WavFile.WavFile.blockCount" title="Permalink to this definition">¶</a></dt>
@@ -1038,8 +1072,7 @@ a zero-padded block or even an entirely empty block.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns raw unformatted audio data as bytearray. This means that e.g. in an 24bit-file three
-consecutive bytearray elements form one sample.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns raw unformatted audio data as bytearray. This means that e.g. in an 24bit-file three consecutive bytearray elements form one sample.</p>
 </td>
 </tr>
 </tbody>
@@ -1384,12 +1417,21 @@ for new jobs.</p>
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="EditorUI.html" class="btn btn-neutral float-right" title="EditorUI package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AnalyzeTools.WidgetSpl.html" class="btn btn-neutral" title="AnalyzeTools.WidgetSpl package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, Philipp Merz und Malte Merdes.
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
 
     </p>
   </div>
@@ -1411,7 +1453,7 @@ for new jobs.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.1.1a',
+            VERSION:'0.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

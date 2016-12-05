@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AnalyzeTools.WidgetExample package &mdash; SNARE Documentation 0.3 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="SNARE Documentation 0.3 documentation" href="../index.html"/>
+        <link rel="up" title="AnalyzeTools package" href="AnalyzeTools.html"/>
+        <link rel="next" title="AnalyzeTools.WidgetFft package" href="AnalyzeTools.WidgetFft.html"/>
+        <link rel="prev" title="AnalyzeTools package" href="AnalyzeTools.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SNARE Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">v0.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Start.html">Start module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MainUI.html">MainUI package</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="AnalyzeTools.html">AnalyzeTools package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="AnalyzeTools.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AnalyzeTools.WidgetExample package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnalyzeTools.WidgetFft.html">AnalyzeTools.WidgetFft package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnalyzeTools.WidgetHistogram.html">AnalyzeTools.WidgetHistogram package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnalyzeTools.WidgetSpl.html">AnalyzeTools.WidgetSpl package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.AnalyzeManager">AnalyzeTools.AnalyzeManager module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.AnalyzeWidget">AnalyzeTools.AnalyzeWidget module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.AnalyzeWidgetSelect">AnalyzeTools.AnalyzeWidgetSelect module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.Calculation">AnalyzeTools.Calculation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.CalibrationWidget">AnalyzeTools.CalibrationWidget module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.NavMenu">AnalyzeTools.NavMenu module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.NominalData">AnalyzeTools.NominalData module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.Plot">AnalyzeTools.Plot module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools.PlotBar">AnalyzeTools.PlotBar module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AnalyzeTools.html#module-AnalyzeTools">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EditorBackend.html">EditorBackend package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EditorUI.html">EditorUI package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reports.html">Reports package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SNARE Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">v0.3</a> &raquo;</li>
+      
+          <li><a href="AnalyzeTools.html">AnalyzeTools package</a> &raquo;</li>
+      
+    <li>AnalyzeTools.WidgetExample package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autogen/AnalyzeTools.WidgetExample.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analyzetools-widgetexample-package">
+<h1>AnalyzeTools.WidgetExample package<a class="headerlink" href="#analyzetools-widgetexample-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-AnalyzeTools.WidgetExample.CalculationExample">
+<span id="analyzetools-widgetexample-calculationexample-module"></span><h2>AnalyzeTools.WidgetExample.CalculationExample module<a class="headerlink" href="#module-AnalyzeTools.WidgetExample.CalculationExample" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.WidgetExample.CalculationExample.CalculationExample">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.WidgetExample.CalculationExample.</code><code class="descname">CalculationExample</code><span class="sig-paren">(</span><em>snare</em>, <em>buffer</em>, <em>calib</em>, <em>timeWeight</em>, <em>fqWeight</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.CalculationExample.CalculationExample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="AnalyzeTools.html#AnalyzeTools.Calculation.Calculation" title="AnalyzeTools.Calculation.Calculation"><code class="xref py py-class docutils literal"><span class="pre">AnalyzeTools.Calculation.Calculation</span></code></a></p>
+<p>CalculationExample contains an example on how to use the AnalyzeWidgets for signal processing.
+It just plots the current selection with the correct axis.</p>
+<p>variables
+self.values:    To store the yAxis values.
+self.xAxis:     To store the xAxis values.</p>
+<dl class="method">
+<dt id="AnalyzeTools.WidgetExample.CalculationExample.CalculationExample.calculate">
+<code class="descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.CalculationExample.CalculationExample.calculate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the Sound Pressure Level.
+Depending on calibration either in dBFS Peakvalue or in dbSPL values. For further information on the
+calibration implementation have a look at AnalyzeBuffer, &#8216;calib&#8217; is only used to choose the right
+dBFS/dBSPL Scale.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.WidgetExample.PlotExample">
+<span id="analyzetools-widgetexample-plotexample-module"></span><h2>AnalyzeTools.WidgetExample.PlotExample module<a class="headerlink" href="#module-AnalyzeTools.WidgetExample.PlotExample" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.WidgetExample.PlotExample.PlotExample">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.WidgetExample.PlotExample.</code><code class="descname">PlotExample</code><span class="sig-paren">(</span><em>calcObj</em>, <em>calib</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.PlotExample.PlotExample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="AnalyzeTools.html#AnalyzeTools.Plot.Plot" title="AnalyzeTools.Plot.Plot"><code class="xref py py-class docutils literal"><span class="pre">AnalyzeTools.Plot.Plot</span></code></a></p>
+<p>Plot class which is a QWidget containing the figure plot.</p>
+<dl class="method">
+<dt id="AnalyzeTools.WidgetExample.PlotExample.PlotExample.getPlot">
+<code class="descname">getPlot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.PlotExample.PlotExample.getPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plot obj with plotted matplot canvas (self.canvas).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">plot object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Obj</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.WidgetExample.WidgetExample">
+<span id="analyzetools-widgetexample-widgetexample-module"></span><h2>AnalyzeTools.WidgetExample.WidgetExample module<a class="headerlink" href="#module-AnalyzeTools.WidgetExample.WidgetExample" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="AnalyzeTools.WidgetExample.WidgetExample.WidgetExample">
+<em class="property">class </em><code class="descclassname">AnalyzeTools.WidgetExample.WidgetExample.</code><code class="descname">WidgetExample</code><span class="sig-paren">(</span><em>snare</em>, <em>channel</em>, <em>selNo</em>, <em>timeWeight</em>, <em>fqWeight</em>, <em>parm1=None</em>, <em>parm2=None</em>, <em>parm3=None</em><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.WidgetExample.WidgetExample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="AnalyzeTools.html#AnalyzeTools.AnalyzeWidget.AnalyzeWidget" title="AnalyzeTools.AnalyzeWidget.AnalyzeWidget"><code class="xref py py-class docutils literal"><span class="pre">AnalyzeTools.AnalyzeWidget.AnalyzeWidget</span></code></a></p>
+<p>Example Widget</p>
+<p>WidgetExample is a QWidget in which the figure, navigation menu and the labels are set. For calculation and plotting
+the figure it conains the calculate and plot method. According to whether calibration is set, the values are either
+in dB fullscale peakvalues or in dB soundpressure level values.
+note::At initialisation the calculation and plot methods are executed automatically.</p>
+<dl class="method">
+<dt id="AnalyzeTools.WidgetExample.WidgetExample.WidgetExample.calculate">
+<code class="descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.WidgetExample.WidgetExample.calculate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the calculation object and execute it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="AnalyzeTools.WidgetExample.WidgetExample.WidgetExample.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AnalyzeTools.WidgetExample.WidgetExample.WidgetExample.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the plot object, store the matplot figure and fill out the labels.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-AnalyzeTools.WidgetExample">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-AnalyzeTools.WidgetExample" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="AnalyzeTools.WidgetFft.html" class="btn btn-neutral float-right" title="AnalyzeTools.WidgetFft package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AnalyzeTools.html" class="btn btn-neutral" title="AnalyzeTools package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Malte Merdes und Philipp Merz.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.3',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -4,8 +4,10 @@ v0.3
 .. toctree::
    :maxdepth: 4
 
+   Start
+   Main
+   MainUI
    AnalyzeTools
    EditorBackend
    EditorUI
-   Main
-   Start
+   Reports

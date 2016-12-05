@@ -1,0 +1,38 @@
+AnalyzeTools.WidgetExample package
+==================================
+
+Submodules
+----------
+
+AnalyzeTools.WidgetExample.CalculationExample module
+----------------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetExample.CalculationExample
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetExample.PlotExample module
+---------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetExample.PlotExample
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetExample.WidgetExample module
+-----------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetExample.WidgetExample
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: AnalyzeTools.WidgetExample
+    :members:
+    :undoc-members:
+    :show-inheritance:

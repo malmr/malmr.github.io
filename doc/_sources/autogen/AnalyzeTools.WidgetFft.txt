@@ -1,0 +1,46 @@
+AnalyzeTools.WidgetFft package
+==============================
+
+Submodules
+----------
+
+AnalyzeTools.WidgetFft.CalculationFft module
+--------------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetFft.CalculationFft
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetFft.NavFft module
+------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetFft.NavFft
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetFft.PlotFft module
+-------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetFft.PlotFft
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+AnalyzeTools.WidgetFft.WidgetFft module
+---------------------------------------
+
+.. automodule:: AnalyzeTools.WidgetFft.WidgetFft
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: AnalyzeTools.WidgetFft
+    :members:
+    :undoc-members:
+    :show-inheritance:

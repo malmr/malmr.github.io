@@ -1,6 +1,16 @@
 AnalyzeTools package
 ====================
 
+Subpackages
+-----------
+
+.. toctree::
+
+    AnalyzeTools.WidgetExample
+    AnalyzeTools.WidgetFft
+    AnalyzeTools.WidgetHistogram
+    AnalyzeTools.WidgetSpl
+
 Submodules
 ----------
 
